@@ -27,6 +27,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         source: "dist/*"
-        target: "/var/www/morose.dev/html"
+        target: "/var/www/minecraftsounds.com/html"
         rm: true
         scp-extra-args: "--exclude='sounds/'"
