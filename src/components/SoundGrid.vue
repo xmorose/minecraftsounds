@@ -236,6 +236,17 @@ export default {
       }
     },
     getSoundItemWithGridState(soundItem) {
+      if (soundItem.isGrouped) {
+        const groupState = this.gridSoundStates[soundItem.id] || {
+          pitch: soundItem.groupedSounds[0].pitch,
+          volume: soundItem.groupedSounds[0].volume
+        };
+        return {
+          ...soundItem,
+          pitch: groupState.pitch,
+          volume: groupState.volume
+        };
+      }
       const gridState = this.gridSoundStates[soundItem.id] || {pitch: soundItem.pitch, volume: soundItem.volume};
       return {...soundItem, ...gridState};
     },
@@ -264,7 +275,16 @@ export default {
     playSound(soundItem) {
       if (soundItem.isGrouped) {
         const randomSound = soundItem.groupedSounds[Math.floor(Math.random() * soundItem.groupedSounds.length)];
-        this.$emit('play-sound', this.getSoundItemWithGridState(randomSound));
+        const groupState = this.gridSoundStates[soundItem.id] || {
+          pitch: soundItem.groupedSounds[0].pitch,
+          volume: soundItem.groupedSounds[0].volume
+        };
+        const soundToPlay = {
+          ...randomSound,
+          pitch: groupState.pitch,
+          volume: groupState.volume
+        };
+        this.$emit('play-sound', soundToPlay);
       } else {
         const soundToPlay = this.getSoundItemWithGridState(soundItem);
         this.$emit('play-sound', soundToPlay);
