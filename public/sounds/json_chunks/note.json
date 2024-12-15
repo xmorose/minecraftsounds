@@ -1,0 +1,114 @@
+{
+  "note.banjo": {
+    "sounds": [
+      {
+        "name": "note/banjo"
+      }
+    ]
+  },
+  "note.bd": {
+    "sounds": [
+      {
+        "name": "note/bd"
+      }
+    ]
+  },
+  "note.bassattack": {
+    "sounds": [
+      {
+        "name": "note/bassattack"
+      }
+    ]
+  },
+  "note.bell": {
+    "sounds": [
+      {
+        "name": "note/bell"
+      }
+    ]
+  },
+  "note.bit": {
+    "sounds": [
+      {
+        "name": "note/bit"
+      }
+    ]
+  },
+  "note.icechime": {
+    "sounds": [
+      {
+        "name": "note/icechime"
+      }
+    ]
+  },
+  "note.cow_bell": {
+    "sounds": [
+      {
+        "name": "note/cow_bell"
+      }
+    ]
+  },
+  "note.didgeridoo": {
+    "sounds": [
+      {
+        "name": "note/didgeridoo"
+      }
+    ]
+  },
+  "note.flute": {
+    "sounds": [
+      {
+        "name": "note/flute"
+      }
+    ]
+  },
+  "note.guitar": {
+    "sounds": [
+      {
+        "name": "note/guitar"
+      }
+    ]
+  },
+  "note.harp2": {
+    "sounds": [
+      {
+        "name": "note/harp2"
+      }
+    ]
+  },
+  "note.hat": {
+    "sounds": [
+      {
+        "name": "note/hat"
+      }
+    ]
+  },
+  "note.iron_xylophone": {
+    "sounds": [
+      {
+        "name": "note/iron_xylophone"
+      }
+    ]
+  },
+  "note.pling": {
+    "sounds": [
+      {
+        "name": "note/pling"
+      }
+    ]
+  },
+  "note.snare": {
+    "sounds": [
+      {
+        "name": "note/snare"
+      }
+    ]
+  },
+  "note.xylobone": {
+    "sounds": [
+      {
+        "name": "note/xylobone"
+      }
+    ]
+  }
+}

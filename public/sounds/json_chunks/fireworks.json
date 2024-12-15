@@ -1,0 +1,51 @@
+{
+  "fireworks.blast1": {
+    "sounds": [
+      {
+        "name": "fireworks/blast1"
+      }
+    ]
+  },
+  "fireworks.blast_far1": {
+    "sounds": [
+      {
+        "name": "fireworks/blast_far1"
+      }
+    ]
+  },
+  "fireworks.largeblast1": {
+    "sounds": [
+      {
+        "name": "fireworks/largeblast1"
+      }
+    ]
+  },
+  "fireworks.largeblast_far1": {
+    "sounds": [
+      {
+        "name": "fireworks/largeblast_far1"
+      }
+    ]
+  },
+  "fireworks.launch1": {
+    "sounds": [
+      {
+        "name": "fireworks/launch1"
+      }
+    ]
+  },
+  "fireworks.twinkle1": {
+    "sounds": [
+      {
+        "name": "fireworks/twinkle1"
+      }
+    ]
+  },
+  "fireworks.twinkle_far1": {
+    "sounds": [
+      {
+        "name": "fireworks/twinkle_far1"
+      }
+    ]
+  }
+}

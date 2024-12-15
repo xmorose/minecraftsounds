@@ -1,0 +1,37 @@
+{
+  "damage.fallbig": {
+    "sounds": [
+      {
+        "name": "damage/fallbig"
+      }
+    ]
+  },
+  "damage.hit1": {
+    "sounds": [
+      {
+        "name": "damage/hit1"
+      }
+    ]
+  },
+  "damage.hit2": {
+    "sounds": [
+      {
+        "name": "damage/hit2"
+      }
+    ]
+  },
+  "damage.hit3": {
+    "sounds": [
+      {
+        "name": "damage/hit3"
+      }
+    ]
+  },
+  "damage.fallsmall": {
+    "sounds": [
+      {
+        "name": "damage/fallsmall"
+      }
+    ]
+  }
+}

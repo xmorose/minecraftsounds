@@ -1,0 +1,154 @@
+{
+  "records.11": {
+    "sounds": [
+      {
+        "name": "records/11",
+        "stream": true
+      }
+    ]
+  },
+  "records.13": {
+    "sounds": [
+      {
+        "name": "records/13",
+        "stream": true
+      }
+    ]
+  },
+  "records.5": {
+    "sounds": [
+      {
+        "name": "records/5",
+        "stream": true
+      }
+    ]
+  },
+  "records.blocks": {
+    "sounds": [
+      {
+        "name": "records/blocks",
+        "stream": true
+      }
+    ]
+  },
+  "records.cat": {
+    "sounds": [
+      {
+        "name": "records/cat",
+        "stream": true
+      }
+    ]
+  },
+  "records.chirp": {
+    "sounds": [
+      {
+        "name": "records/chirp",
+        "stream": true
+      }
+    ]
+  },
+  "records.creator": {
+    "sounds": [
+      {
+        "name": "records/creator",
+        "stream": true
+      }
+    ]
+  },
+  "records.creator_music_box": {
+    "sounds": [
+      {
+        "name": "records/creator_music_box",
+        "stream": true
+      }
+    ]
+  },
+  "records.far": {
+    "sounds": [
+      {
+        "name": "records/far",
+        "stream": true
+      }
+    ]
+  },
+  "records.mall": {
+    "sounds": [
+      {
+        "name": "records/mall",
+        "stream": true
+      }
+    ]
+  },
+  "records.mellohi": {
+    "sounds": [
+      {
+        "name": "records/mellohi",
+        "stream": true
+      }
+    ]
+  },
+  "records.otherside": {
+    "sounds": [
+      {
+        "name": "records/otherside",
+        "stream": true
+      }
+    ]
+  },
+  "records.pigstep": {
+    "sounds": [
+      {
+        "name": "records/pigstep",
+        "stream": true
+      }
+    ]
+  },
+  "records.precipice": {
+    "sounds": [
+      {
+        "name": "records/precipice",
+        "stream": true
+      }
+    ]
+  },
+  "records.relic": {
+    "sounds": [
+      {
+        "name": "records/relic",
+        "stream": true
+      }
+    ]
+  },
+  "records.stal": {
+    "sounds": [
+      {
+        "name": "records/stal",
+        "stream": true
+      }
+    ]
+  },
+  "records.strad": {
+    "sounds": [
+      {
+        "name": "records/strad",
+        "stream": true
+      }
+    ]
+  },
+  "records.wait": {
+    "sounds": [
+      {
+        "name": "records/wait",
+        "stream": true
+      }
+    ]
+  },
+  "records.ward": {
+    "sounds": [
+      {
+        "name": "records/ward",
+        "stream": true
+      }
+    ]
+  }
+}

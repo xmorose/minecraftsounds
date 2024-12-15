@@ -1,0 +1,178 @@
+{
+  "liquid.lava": {
+    "sounds": [
+      {
+        "name": "liquid/lava"
+      }
+    ]
+  },
+  "liquid.lavapop": {
+    "sounds": [
+      {
+        "name": "liquid/lavapop"
+      }
+    ]
+  },
+  "liquid.water": {
+    "sounds": [
+      {
+        "name": "liquid/water"
+      }
+    ]
+  },
+  "liquid.swim1": {
+    "sounds": [
+      {
+        "name": "liquid/swim1"
+      }
+    ]
+  },
+  "liquid.swim2": {
+    "sounds": [
+      {
+        "name": "liquid/swim2"
+      }
+    ]
+  },
+  "liquid.swim3": {
+    "sounds": [
+      {
+        "name": "liquid/swim3"
+      }
+    ]
+  },
+  "liquid.swim4": {
+    "sounds": [
+      {
+        "name": "liquid/swim4"
+      }
+    ]
+  },
+  "liquid.swim5": {
+    "sounds": [
+      {
+        "name": "liquid/swim5"
+      }
+    ]
+  },
+  "liquid.splash": {
+    "sounds": [
+      {
+        "name": "liquid/splash"
+      }
+    ]
+  },
+  "liquid.splash2": {
+    "sounds": [
+      {
+        "name": "liquid/splash2"
+      }
+    ]
+  },
+  "liquid.heavy_splash": {
+    "sounds": [
+      {
+        "name": "liquid/heavy_splash"
+      }
+    ]
+  },
+  "liquid.swim6": {
+    "sounds": [
+      {
+        "name": "liquid/swim6"
+      }
+    ]
+  },
+  "liquid.swim7": {
+    "sounds": [
+      {
+        "name": "liquid/swim7"
+      }
+    ]
+  },
+  "liquid.swim8": {
+    "sounds": [
+      {
+        "name": "liquid/swim8"
+      }
+    ]
+  },
+  "liquid.swim9": {
+    "sounds": [
+      {
+        "name": "liquid/swim9",
+        "volume": 0.4
+      }
+    ]
+  },
+  "liquid.swim10": {
+    "sounds": [
+      {
+        "name": "liquid/swim10",
+        "volume": 0.4
+      }
+    ]
+  },
+  "liquid.swim11": {
+    "sounds": [
+      {
+        "name": "liquid/swim11",
+        "volume": 0.4
+      }
+    ]
+  },
+  "liquid.swim12": {
+    "sounds": [
+      {
+        "name": "liquid/swim12",
+        "volume": 0.4
+      }
+    ]
+  },
+  "liquid.swim13": {
+    "sounds": [
+      {
+        "name": "liquid/swim13"
+      }
+    ]
+  },
+  "liquid.swim14": {
+    "sounds": [
+      {
+        "name": "liquid/swim14",
+        "volume": 0.6
+      }
+    ]
+  },
+  "liquid.swim15": {
+    "sounds": [
+      {
+        "name": "liquid/swim15",
+        "volume": 0.6
+      }
+    ]
+  },
+  "liquid.swim16": {
+    "sounds": [
+      {
+        "name": "liquid/swim16",
+        "volume": 0.6
+      }
+    ]
+  },
+  "liquid.swim17": {
+    "sounds": [
+      {
+        "name": "liquid/swim17",
+        "volume": 0.6
+      }
+    ]
+  },
+  "liquid.swim18": {
+    "sounds": [
+      {
+        "name": "liquid/swim18"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "fire.fire": {
+    "sounds": [
+      {
+        "name": "fire/fire"
+      }
+    ]
+  },
+  "fire.ignite": {
+    "sounds": [
+      {
+        "name": "fire/ignite"
+      }
+    ]
+  }
+}

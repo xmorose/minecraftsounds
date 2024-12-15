@@ -1,0 +1,1741 @@
+{
+  "entity.armorstand.break1": {
+    "sounds": [
+      {
+        "name": "entity/armorstand/break1"
+      }
+    ]
+  },
+  "entity.armorstand.break2": {
+    "sounds": [
+      {
+        "name": "entity/armorstand/break2"
+      }
+    ]
+  },
+  "entity.armorstand.break3": {
+    "sounds": [
+      {
+        "name": "entity/armorstand/break3"
+      }
+    ]
+  },
+  "entity.armorstand.break4": {
+    "sounds": [
+      {
+        "name": "entity/armorstand/break4"
+      }
+    ]
+  },
+  "entity.armorstand.hit1": {
+    "sounds": [
+      {
+        "name": "entity/armorstand/hit1"
+      }
+    ]
+  },
+  "entity.armorstand.hit2": {
+    "sounds": [
+      {
+        "name": "entity/armorstand/hit2"
+      }
+    ]
+  },
+  "entity.armorstand.hit3": {
+    "sounds": [
+      {
+        "name": "entity/armorstand/hit3"
+      }
+    ]
+  },
+  "entity.armorstand.hit4": {
+    "sounds": [
+      {
+        "name": "entity/armorstand/hit4"
+      }
+    ]
+  },
+  "entity.fish.swim5": {
+    "sounds": [
+      {
+        "name": "entity/fish/swim5"
+      }
+    ]
+  },
+  "entity.fish.swim6": {
+    "sounds": [
+      {
+        "name": "entity/fish/swim6"
+      }
+    ]
+  },
+  "entity.fish.swim7": {
+    "sounds": [
+      {
+        "name": "entity/fish/swim7"
+      }
+    ]
+  },
+  "entity.boat.paddle_land1": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_land1"
+      }
+    ]
+  },
+  "entity.boat.paddle_land2": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_land2"
+      }
+    ]
+  },
+  "entity.boat.paddle_land3": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_land3"
+      }
+    ]
+  },
+  "entity.boat.paddle_land4": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_land4"
+      }
+    ]
+  },
+  "entity.boat.paddle_land5": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_land5"
+      }
+    ]
+  },
+  "entity.boat.paddle_land6": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_land6"
+      }
+    ]
+  },
+  "entity.boat.paddle_water1": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_water1",
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.boat.paddle_water2": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_water2",
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.boat.paddle_water3": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_water3",
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.boat.paddle_water4": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_water4",
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.boat.paddle_water5": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_water5",
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.boat.paddle_water6": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_water6",
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.boat.paddle_water7": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_water7",
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.boat.paddle_water8": {
+    "sounds": [
+      {
+        "name": "entity/boat/paddle_water8",
+        "volume": 0.8
+      }
+    ]
+  },
+  "entity.fish.hurt1": {
+    "sounds": [
+      {
+        "name": "entity/fish/hurt1"
+      }
+    ]
+  },
+  "entity.fish.hurt2": {
+    "sounds": [
+      {
+        "name": "entity/fish/hurt2"
+      }
+    ]
+  },
+  "entity.fish.hurt3": {
+    "sounds": [
+      {
+        "name": "entity/fish/hurt3"
+      }
+    ]
+  },
+  "entity.fish.hurt4": {
+    "sounds": [
+      {
+        "name": "entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.fish.flop1": {
+    "sounds": [
+      {
+        "name": "entity/fish/flop1",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.fish.flop2": {
+    "sounds": [
+      {
+        "name": "entity/fish/flop2",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.fish.flop3": {
+    "sounds": [
+      {
+        "name": "entity/fish/flop3",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.fish.flop4": {
+    "sounds": [
+      {
+        "name": "entity/fish/flop4",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.cow.milk1": {
+    "sounds": [
+      {
+        "name": "entity/cow/milk1"
+      }
+    ]
+  },
+  "entity.cow.milk2": {
+    "sounds": [
+      {
+        "name": "entity/cow/milk2"
+      }
+    ]
+  },
+  "entity.cow.milk3": {
+    "sounds": [
+      {
+        "name": "entity/cow/milk3"
+      }
+    ]
+  },
+  "entity.horse.eat1": {
+    "sounds": [
+      {
+        "name": "entity/horse/eat1"
+      }
+    ]
+  },
+  "entity.horse.eat2": {
+    "sounds": [
+      {
+        "name": "entity/horse/eat2"
+      }
+    ]
+  },
+  "entity.horse.eat3": {
+    "sounds": [
+      {
+        "name": "entity/horse/eat3"
+      }
+    ]
+  },
+  "entity.horse.eat4": {
+    "sounds": [
+      {
+        "name": "entity/horse/eat4"
+      }
+    ]
+  },
+  "entity.horse.eat5": {
+    "sounds": [
+      {
+        "name": "entity/horse/eat5"
+      }
+    ]
+  },
+  "entity.endereye.dead1": {
+    "sounds": [
+      {
+        "name": "entity/endereye/dead1",
+        "volume": 1.3
+      }
+    ]
+  },
+  "entity.endereye.dead2": {
+    "sounds": [
+      {
+        "name": "entity/endereye/dead2",
+        "volume": 1.3
+      }
+    ]
+  },
+  "entity.endereye.endereye_launch1": {
+    "sounds": [
+      {
+        "name": "entity/endereye/endereye_launch1"
+      }
+    ]
+  },
+  "entity.endereye.endereye_launch2": {
+    "sounds": [
+      {
+        "name": "entity/endereye/endereye_launch2"
+      }
+    ]
+  },
+  "entity.fish.swim1": {
+    "sounds": [
+      {
+        "name": "entity/fish/swim1"
+      }
+    ]
+  },
+  "entity.fish.swim2": {
+    "sounds": [
+      {
+        "name": "entity/fish/swim2"
+      }
+    ]
+  },
+  "entity.fish.swim3": {
+    "sounds": [
+      {
+        "name": "entity/fish/swim3"
+      }
+    ]
+  },
+  "entity.fish.swim4": {
+    "sounds": [
+      {
+        "name": "entity/fish/swim4"
+      }
+    ]
+  },
+  "entity.bobber.retrieve1": {
+    "sounds": [
+      {
+        "name": "entity/bobber/retrieve1",
+        "pitch": 2.4
+      }
+    ]
+  },
+  "entity.bobber.retrieve2": {
+    "sounds": [
+      {
+        "name": "entity/bobber/retrieve2",
+        "pitch": 2.4
+      }
+    ]
+  },
+  "entity.bobber.castfast": {
+    "sounds": [
+      {
+        "name": "entity/bobber/castfast"
+      }
+    ]
+  },
+  "entity.itemframe.add_item1": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/add_item1"
+      }
+    ]
+  },
+  "entity.itemframe.add_item2": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/add_item2"
+      }
+    ]
+  },
+  "entity.itemframe.add_item3": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/add_item3"
+      }
+    ]
+  },
+  "entity.itemframe.add_item4": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/add_item4"
+      }
+    ]
+  },
+  "entity.itemframe.break1": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/break1"
+      }
+    ]
+  },
+  "entity.itemframe.break2": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/break2"
+      }
+    ]
+  },
+  "entity.itemframe.break3": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/break3"
+      }
+    ]
+  },
+  "entity.itemframe.place1": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/place1"
+      }
+    ]
+  },
+  "entity.itemframe.place2": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/place2"
+      }
+    ]
+  },
+  "entity.itemframe.place3": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/place3"
+      }
+    ]
+  },
+  "entity.itemframe.place4": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/place4"
+      }
+    ]
+  },
+  "entity.itemframe.remove_item1": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/remove_item1"
+      }
+    ]
+  },
+  "entity.itemframe.remove_item2": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/remove_item2"
+      }
+    ]
+  },
+  "entity.itemframe.remove_item3": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/remove_item3"
+      }
+    ]
+  },
+  "entity.itemframe.remove_item4": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/remove_item4"
+      }
+    ]
+  },
+  "entity.itemframe.rotate_item1": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/rotate_item1"
+      }
+    ]
+  },
+  "entity.itemframe.rotate_item2": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/rotate_item2"
+      }
+    ]
+  },
+  "entity.itemframe.rotate_item3": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/rotate_item3"
+      }
+    ]
+  },
+  "entity.itemframe.rotate_item4": {
+    "sounds": [
+      {
+        "name": "entity/itemframe/rotate_item4"
+      }
+    ]
+  },
+  "entity.glow_squid.ambient1": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/ambient1"
+      }
+    ]
+  },
+  "entity.glow_squid.ambient2": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/ambient2"
+      }
+    ]
+  },
+  "entity.glow_squid.ambient3": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/ambient3"
+      }
+    ]
+  },
+  "entity.glow_squid.ambient4": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/ambient4"
+      }
+    ]
+  },
+  "entity.glow_squid.ambient5": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/ambient5"
+      }
+    ]
+  },
+  "entity.glow_squid.death1": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/death1"
+      }
+    ]
+  },
+  "entity.glow_squid.death2": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/death2"
+      }
+    ]
+  },
+  "entity.glow_squid.death3": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/death3"
+      }
+    ]
+  },
+  "entity.glow_squid.hurt1": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/hurt1"
+      }
+    ]
+  },
+  "entity.glow_squid.hurt2": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/hurt2"
+      }
+    ]
+  },
+  "entity.glow_squid.hurt3": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/hurt3"
+      }
+    ]
+  },
+  "entity.glow_squid.hurt4": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/hurt4"
+      }
+    ]
+  },
+  "entity.glow_squid.squirt1": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/squirt1"
+      }
+    ]
+  },
+  "entity.glow_squid.squirt2": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/squirt2"
+      }
+    ]
+  },
+  "entity.glow_squid.squirt3": {
+    "sounds": [
+      {
+        "name": "entity/glow_squid/squirt3"
+      }
+    ]
+  },
+  "entity.guardian.ambient1": {
+    "sounds": [
+      {
+        "name": "entity/guardian/ambient1",
+        "volume": 0.1
+      }
+    ]
+  },
+  "entity.guardian.ambient2": {
+    "sounds": [
+      {
+        "name": "entity/guardian/ambient2",
+        "volume": 0.1
+      }
+    ]
+  },
+  "entity.guardian.ambient3": {
+    "sounds": [
+      {
+        "name": "entity/guardian/ambient3",
+        "volume": 0.1
+      }
+    ]
+  },
+  "entity.guardian.ambient4": {
+    "sounds": [
+      {
+        "name": "entity/guardian/ambient4",
+        "volume": 0.1
+      }
+    ]
+  },
+  "entity.leashknot.break1": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/break1"
+      }
+    ]
+  },
+  "entity.leashknot.break2": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/break2"
+      }
+    ]
+  },
+  "entity.leashknot.break3": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/break3"
+      }
+    ]
+  },
+  "entity.leashknot.place1": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/place1"
+      }
+    ]
+  },
+  "entity.leashknot.place2": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/place2"
+      }
+    ]
+  },
+  "entity.leashknot.place3": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/place3"
+      }
+    ]
+  },
+  "entity.painting.break1": {
+    "sounds": [
+      {
+        "name": "entity/painting/break1"
+      }
+    ]
+  },
+  "entity.painting.break2": {
+    "sounds": [
+      {
+        "name": "entity/painting/break2"
+      }
+    ]
+  },
+  "entity.painting.break3": {
+    "sounds": [
+      {
+        "name": "entity/painting/break3"
+      }
+    ]
+  },
+  "entity.painting.place1": {
+    "sounds": [
+      {
+        "name": "entity/painting/place1"
+      }
+    ]
+  },
+  "entity.painting.place2": {
+    "sounds": [
+      {
+        "name": "entity/painting/place2"
+      }
+    ]
+  },
+  "entity.painting.place3": {
+    "sounds": [
+      {
+        "name": "entity/painting/place3"
+      }
+    ]
+  },
+  "entity.painting.place4": {
+    "sounds": [
+      {
+        "name": "entity/painting/place4"
+      }
+    ]
+  },
+  "entity.player.attack.crit1": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/crit1",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.crit2": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/crit2",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.crit3": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/crit3",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.knockback1": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/knockback1",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.knockback2": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/knockback2",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.knockback3": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/knockback3",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.knockback4": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/knockback4",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.weak1": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/weak1",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.weak2": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/weak2",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.weak3": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/weak3",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.weak4": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/weak4",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.strong1": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/strong1",
+        "volume": 0.6
+      }
+    ]
+  },
+  "entity.player.attack.strong2": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/strong2",
+        "volume": 0.6
+      }
+    ]
+  },
+  "entity.player.attack.strong3": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/strong3",
+        "volume": 0.6
+      }
+    ]
+  },
+  "entity.player.attack.strong4": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/strong4",
+        "volume": 0.6
+      }
+    ]
+  },
+  "entity.player.attack.strong5": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/strong5",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.strong6": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/strong6",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.sweep1": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/sweep1",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.sweep2": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/sweep2",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.sweep3": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/sweep3",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.sweep4": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/sweep4",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.sweep5": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/sweep5",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.sweep6": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/sweep6",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.attack.sweep7": {
+    "sounds": [
+      {
+        "name": "entity/player/attack/sweep7",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.player.hurt.drown1": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/drown1"
+      }
+    ]
+  },
+  "entity.player.hurt.drown2": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/drown2"
+      }
+    ]
+  },
+  "entity.player.hurt.drown3": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/drown3"
+      }
+    ]
+  },
+  "entity.player.hurt.drown4": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/drown4"
+      }
+    ]
+  },
+  "entity.player.hurt.freeze_hurt1": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/freeze_hurt1"
+      }
+    ]
+  },
+  "entity.player.hurt.freeze_hurt2": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/freeze_hurt2"
+      }
+    ]
+  },
+  "entity.player.hurt.freeze_hurt3": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/freeze_hurt3"
+      }
+    ]
+  },
+  "entity.player.hurt.freeze_hurt4": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/freeze_hurt4"
+      }
+    ]
+  },
+  "entity.player.hurt.freeze_hurt5": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/freeze_hurt5"
+      }
+    ]
+  },
+  "entity.player.hurt.fire_hurt1": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/fire_hurt1"
+      }
+    ]
+  },
+  "entity.player.hurt.fire_hurt2": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/fire_hurt2"
+      }
+    ]
+  },
+  "entity.player.hurt.fire_hurt3": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/fire_hurt3"
+      }
+    ]
+  },
+  "entity.player.hurt.berrybush_hurt1": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/berrybush_hurt1"
+      }
+    ]
+  },
+  "entity.player.hurt.berrybush_hurt2": {
+    "sounds": [
+      {
+        "name": "entity/player/hurt/berrybush_hurt2"
+      }
+    ]
+  },
+  "entity.pufferfish.blow_out1": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/blow_out1",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.pufferfish.blow_out2": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/blow_out2",
+        "volume": 0.7
+      }
+    ]
+  },
+  "entity.pufferfish.blow_up1": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/blow_up1",
+        "volume": 0.45
+      }
+    ]
+  },
+  "entity.pufferfish.blow_up2": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/blow_up2",
+        "volume": 0.45
+      }
+    ]
+  },
+  "entity.pufferfish.death1": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/death1"
+      }
+    ]
+  },
+  "entity.pufferfish.death2": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/death2"
+      }
+    ]
+  },
+  "entity.pufferfish.flop1": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/flop1",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.pufferfish.flop2": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/flop2",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.pufferfish.flop3": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/flop3",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.pufferfish.flop4": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/flop4",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.pufferfish.hurt1": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/hurt1"
+      }
+    ]
+  },
+  "entity.pufferfish.hurt2": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/hurt2"
+      }
+    ]
+  },
+  "entity.pufferfish.sting1": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/sting1"
+      }
+    ]
+  },
+  "entity.pufferfish.sting2": {
+    "sounds": [
+      {
+        "name": "entity/pufferfish/sting2"
+      }
+    ]
+  },
+  "entity.rabbit.attack1": {
+    "sounds": [
+      {
+        "name": "entity/rabbit/attack1"
+      }
+    ]
+  },
+  "entity.rabbit.attack2": {
+    "sounds": [
+      {
+        "name": "entity/rabbit/attack2"
+      }
+    ]
+  },
+  "entity.rabbit.attack3": {
+    "sounds": [
+      {
+        "name": "entity/rabbit/attack3"
+      }
+    ]
+  },
+  "entity.rabbit.attack4": {
+    "sounds": [
+      {
+        "name": "entity/rabbit/attack4"
+      }
+    ]
+  },
+  "entity.shulker.ambient1": {
+    "sounds": [
+      {
+        "name": "entity/shulker/ambient1"
+      }
+    ]
+  },
+  "entity.shulker.ambient2": {
+    "sounds": [
+      {
+        "name": "entity/shulker/ambient2"
+      }
+    ]
+  },
+  "entity.shulker.ambient3": {
+    "sounds": [
+      {
+        "name": "entity/shulker/ambient3"
+      }
+    ]
+  },
+  "entity.shulker.ambient4": {
+    "sounds": [
+      {
+        "name": "entity/shulker/ambient4"
+      }
+    ]
+  },
+  "entity.shulker.ambient5": {
+    "sounds": [
+      {
+        "name": "entity/shulker/ambient5"
+      }
+    ]
+  },
+  "entity.shulker.ambient6": {
+    "sounds": [
+      {
+        "name": "entity/shulker/ambient6"
+      }
+    ]
+  },
+  "entity.shulker.ambient7": {
+    "sounds": [
+      {
+        "name": "entity/shulker/ambient7"
+      }
+    ]
+  },
+  "entity.shulker.close1": {
+    "sounds": [
+      {
+        "name": "entity/shulker/close1"
+      }
+    ]
+  },
+  "entity.shulker.close2": {
+    "sounds": [
+      {
+        "name": "entity/shulker/close2"
+      }
+    ]
+  },
+  "entity.shulker.close3": {
+    "sounds": [
+      {
+        "name": "entity/shulker/close3"
+      }
+    ]
+  },
+  "entity.shulker.close4": {
+    "sounds": [
+      {
+        "name": "entity/shulker/close4"
+      }
+    ]
+  },
+  "entity.shulker.close5": {
+    "sounds": [
+      {
+        "name": "entity/shulker/close5"
+      }
+    ]
+  },
+  "entity.shulker.death1": {
+    "sounds": [
+      {
+        "name": "entity/shulker/death1"
+      }
+    ]
+  },
+  "entity.shulker.death2": {
+    "sounds": [
+      {
+        "name": "entity/shulker/death2"
+      }
+    ]
+  },
+  "entity.shulker.death3": {
+    "sounds": [
+      {
+        "name": "entity/shulker/death3"
+      }
+    ]
+  },
+  "entity.shulker.death4": {
+    "sounds": [
+      {
+        "name": "entity/shulker/death4"
+      }
+    ]
+  },
+  "entity.shulker.hurt1": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt1"
+      }
+    ]
+  },
+  "entity.shulker.hurt2": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt2"
+      }
+    ]
+  },
+  "entity.shulker.hurt3": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt3"
+      }
+    ]
+  },
+  "entity.shulker.hurt4": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt4"
+      }
+    ]
+  },
+  "entity.shulker.hurt_closed1": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt_closed1"
+      }
+    ]
+  },
+  "entity.shulker.hurt_closed2": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt_closed2"
+      }
+    ]
+  },
+  "entity.shulker.hurt_closed3": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt_closed3"
+      }
+    ]
+  },
+  "entity.shulker.hurt_closed4": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt_closed4"
+      }
+    ]
+  },
+  "entity.shulker.hurt_closed5": {
+    "sounds": [
+      {
+        "name": "entity/shulker/hurt_closed5"
+      }
+    ]
+  },
+  "entity.shulker.open1": {
+    "sounds": [
+      {
+        "name": "entity/shulker/open1"
+      }
+    ]
+  },
+  "entity.shulker.open2": {
+    "sounds": [
+      {
+        "name": "entity/shulker/open2"
+      }
+    ]
+  },
+  "entity.shulker.open3": {
+    "sounds": [
+      {
+        "name": "entity/shulker/open3"
+      }
+    ]
+  },
+  "entity.shulker.open4": {
+    "sounds": [
+      {
+        "name": "entity/shulker/open4"
+      }
+    ]
+  },
+  "entity.shulker.open5": {
+    "sounds": [
+      {
+        "name": "entity/shulker/open5"
+      }
+    ]
+  },
+  "entity.shulker.shoot1": {
+    "sounds": [
+      {
+        "name": "entity/shulker/shoot1"
+      }
+    ]
+  },
+  "entity.shulker.shoot2": {
+    "sounds": [
+      {
+        "name": "entity/shulker/shoot2"
+      }
+    ]
+  },
+  "entity.shulker.shoot3": {
+    "sounds": [
+      {
+        "name": "entity/shulker/shoot3"
+      }
+    ]
+  },
+  "entity.shulker.shoot4": {
+    "sounds": [
+      {
+        "name": "entity/shulker/shoot4"
+      }
+    ]
+  },
+  "entity.shulker_bullet.hit1": {
+    "sounds": [
+      {
+        "name": "entity/shulker_bullet/hit1"
+      }
+    ]
+  },
+  "entity.shulker_bullet.hit2": {
+    "sounds": [
+      {
+        "name": "entity/shulker_bullet/hit2"
+      }
+    ]
+  },
+  "entity.shulker_bullet.hit3": {
+    "sounds": [
+      {
+        "name": "entity/shulker_bullet/hit3"
+      }
+    ]
+  },
+  "entity.shulker_bullet.hit4": {
+    "sounds": [
+      {
+        "name": "entity/shulker_bullet/hit4"
+      }
+    ]
+  },
+  "entity.snowman.death1": {
+    "sounds": [
+      {
+        "name": "entity/snowman/death1"
+      }
+    ]
+  },
+  "entity.snowman.death2": {
+    "sounds": [
+      {
+        "name": "entity/snowman/death2"
+      }
+    ]
+  },
+  "entity.snowman.death3": {
+    "sounds": [
+      {
+        "name": "entity/snowman/death3"
+      }
+    ]
+  },
+  "entity.snowman.hurt1": {
+    "sounds": [
+      {
+        "name": "entity/snowman/hurt1"
+      }
+    ]
+  },
+  "entity.snowman.hurt2": {
+    "sounds": [
+      {
+        "name": "entity/snowman/hurt2"
+      }
+    ]
+  },
+  "entity.snowman.hurt3": {
+    "sounds": [
+      {
+        "name": "entity/snowman/hurt3"
+      }
+    ]
+  },
+  "entity.squid.ambient1": {
+    "sounds": [
+      {
+        "name": "entity/squid/ambient1"
+      }
+    ]
+  },
+  "entity.squid.ambient2": {
+    "sounds": [
+      {
+        "name": "entity/squid/ambient2"
+      }
+    ]
+  },
+  "entity.squid.ambient3": {
+    "sounds": [
+      {
+        "name": "entity/squid/ambient3"
+      }
+    ]
+  },
+  "entity.squid.ambient4": {
+    "sounds": [
+      {
+        "name": "entity/squid/ambient4"
+      }
+    ]
+  },
+  "entity.squid.ambient5": {
+    "sounds": [
+      {
+        "name": "entity/squid/ambient5"
+      }
+    ]
+  },
+  "entity.squid.death1": {
+    "sounds": [
+      {
+        "name": "entity/squid/death1"
+      }
+    ]
+  },
+  "entity.squid.death2": {
+    "sounds": [
+      {
+        "name": "entity/squid/death2"
+      }
+    ]
+  },
+  "entity.squid.death3": {
+    "sounds": [
+      {
+        "name": "entity/squid/death3"
+      }
+    ]
+  },
+  "entity.squid.hurt1": {
+    "sounds": [
+      {
+        "name": "entity/squid/hurt1"
+      }
+    ]
+  },
+  "entity.squid.hurt2": {
+    "sounds": [
+      {
+        "name": "entity/squid/hurt2"
+      }
+    ]
+  },
+  "entity.squid.hurt3": {
+    "sounds": [
+      {
+        "name": "entity/squid/hurt3"
+      }
+    ]
+  },
+  "entity.squid.hurt4": {
+    "sounds": [
+      {
+        "name": "entity/squid/hurt4"
+      }
+    ]
+  },
+  "entity.squid.squirt1": {
+    "sounds": [
+      {
+        "name": "entity/squid/squirt1"
+      }
+    ]
+  },
+  "entity.squid.squirt2": {
+    "sounds": [
+      {
+        "name": "entity/squid/squirt2"
+      }
+    ]
+  },
+  "entity.squid.squirt3": {
+    "sounds": [
+      {
+        "name": "entity/squid/squirt3"
+      }
+    ]
+  },
+  "entity.wind_charge.wind_burst1": {
+    "sounds": [
+      {
+        "attenuation_distance": 8,
+        "name": "entity/wind_charge/wind_burst1",
+        "pitch": 1.25
+      }
+    ]
+  },
+  "entity.wind_charge.wind_burst2": {
+    "sounds": [
+      {
+        "attenuation_distance": 8,
+        "name": "entity/wind_charge/wind_burst2",
+        "pitch": 1.25
+      }
+    ]
+  },
+  "entity.wind_charge.wind_burst3": {
+    "sounds": [
+      {
+        "attenuation_distance": 8,
+        "name": "entity/wind_charge/wind_burst3",
+        "pitch": 1.25
+      }
+    ]
+  },
+  "entity.witch.ambient1": {
+    "sounds": [
+      {
+        "name": "entity/witch/ambient1"
+      }
+    ]
+  },
+  "entity.witch.ambient2": {
+    "sounds": [
+      {
+        "name": "entity/witch/ambient2"
+      }
+    ]
+  },
+  "entity.witch.ambient3": {
+    "sounds": [
+      {
+        "name": "entity/witch/ambient3"
+      }
+    ]
+  },
+  "entity.witch.ambient4": {
+    "sounds": [
+      {
+        "name": "entity/witch/ambient4"
+      }
+    ]
+  },
+  "entity.witch.ambient5": {
+    "sounds": [
+      {
+        "name": "entity/witch/ambient5",
+        "pitch": 0.9
+      }
+    ]
+  },
+  "entity.witch.celebrate": {
+    "sounds": [
+      {
+        "name": "entity/witch/celebrate"
+      }
+    ]
+  },
+  "entity.witch.death1": {
+    "sounds": [
+      {
+        "name": "entity/witch/death1"
+      }
+    ]
+  },
+  "entity.witch.death2": {
+    "sounds": [
+      {
+        "name": "entity/witch/death2"
+      }
+    ]
+  },
+  "entity.witch.death3": {
+    "sounds": [
+      {
+        "name": "entity/witch/death3"
+      }
+    ]
+  },
+  "entity.witch.drink1": {
+    "sounds": [
+      {
+        "name": "entity/witch/drink1"
+      }
+    ]
+  },
+  "entity.witch.drink2": {
+    "sounds": [
+      {
+        "name": "entity/witch/drink2"
+      }
+    ]
+  },
+  "entity.witch.drink3": {
+    "sounds": [
+      {
+        "name": "entity/witch/drink3"
+      }
+    ]
+  },
+  "entity.witch.drink4": {
+    "sounds": [
+      {
+        "name": "entity/witch/drink4"
+      }
+    ]
+  },
+  "entity.witch.hurt1": {
+    "sounds": [
+      {
+        "name": "entity/witch/hurt1"
+      }
+    ]
+  },
+  "entity.witch.hurt2": {
+    "sounds": [
+      {
+        "name": "entity/witch/hurt2"
+      }
+    ]
+  },
+  "entity.witch.hurt3": {
+    "sounds": [
+      {
+        "name": "entity/witch/hurt3"
+      }
+    ]
+  },
+  "entity.witch.throw1": {
+    "sounds": [
+      {
+        "name": "entity/witch/throw1"
+      }
+    ]
+  },
+  "entity.witch.throw2": {
+    "sounds": [
+      {
+        "name": "entity/witch/throw2"
+      }
+    ]
+  },
+  "entity.witch.throw3": {
+    "sounds": [
+      {
+        "name": "entity/witch/throw3"
+      }
+    ]
+  }
+}

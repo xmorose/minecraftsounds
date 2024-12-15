@@ -1,0 +1,24 @@
+{
+  "portal.portal": {
+    "sounds": [
+      {
+        "attenuation_distance": 10,
+        "name": "portal/portal"
+      }
+    ]
+  },
+  "portal.travel": {
+    "sounds": [
+      {
+        "name": "portal/travel"
+      }
+    ]
+  },
+  "portal.trigger": {
+    "sounds": [
+      {
+        "name": "portal/trigger"
+      }
+    ]
+  }
+}

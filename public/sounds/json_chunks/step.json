@@ -1,0 +1,415 @@
+{
+  "step.stone1": {
+    "sounds": [
+      {
+        "name": "step/stone1"
+      }
+    ]
+  },
+  "step.stone2": {
+    "sounds": [
+      {
+        "name": "step/stone2"
+      }
+    ]
+  },
+  "step.stone3": {
+    "sounds": [
+      {
+        "name": "step/stone3"
+      }
+    ]
+  },
+  "step.stone4": {
+    "sounds": [
+      {
+        "name": "step/stone4"
+      }
+    ]
+  },
+  "step.stone5": {
+    "sounds": [
+      {
+        "name": "step/stone5"
+      }
+    ]
+  },
+  "step.stone6": {
+    "sounds": [
+      {
+        "name": "step/stone6"
+      }
+    ]
+  },
+  "step.coral1": {
+    "sounds": [
+      {
+        "name": "step/coral1"
+      }
+    ]
+  },
+  "step.coral2": {
+    "sounds": [
+      {
+        "name": "step/coral2"
+      }
+    ]
+  },
+  "step.coral3": {
+    "sounds": [
+      {
+        "name": "step/coral3"
+      }
+    ]
+  },
+  "step.coral4": {
+    "sounds": [
+      {
+        "name": "step/coral4"
+      }
+    ]
+  },
+  "step.coral5": {
+    "sounds": [
+      {
+        "name": "step/coral5"
+      }
+    ]
+  },
+  "step.coral6": {
+    "sounds": [
+      {
+        "name": "step/coral6"
+      }
+    ]
+  },
+  "step.grass1": {
+    "sounds": [
+      {
+        "name": "step/grass1"
+      }
+    ]
+  },
+  "step.grass2": {
+    "sounds": [
+      {
+        "name": "step/grass2"
+      }
+    ]
+  },
+  "step.grass3": {
+    "sounds": [
+      {
+        "name": "step/grass3"
+      }
+    ]
+  },
+  "step.grass4": {
+    "sounds": [
+      {
+        "name": "step/grass4"
+      }
+    ]
+  },
+  "step.grass5": {
+    "sounds": [
+      {
+        "name": "step/grass5"
+      }
+    ]
+  },
+  "step.grass6": {
+    "sounds": [
+      {
+        "name": "step/grass6"
+      }
+    ]
+  },
+  "step.gravel1": {
+    "sounds": [
+      {
+        "name": "step/gravel1"
+      }
+    ]
+  },
+  "step.gravel2": {
+    "sounds": [
+      {
+        "name": "step/gravel2"
+      }
+    ]
+  },
+  "step.gravel3": {
+    "sounds": [
+      {
+        "name": "step/gravel3"
+      }
+    ]
+  },
+  "step.gravel4": {
+    "sounds": [
+      {
+        "name": "step/gravel4"
+      }
+    ]
+  },
+  "step.ladder1": {
+    "sounds": [
+      {
+        "name": "step/ladder1"
+      }
+    ]
+  },
+  "step.ladder2": {
+    "sounds": [
+      {
+        "name": "step/ladder2"
+      }
+    ]
+  },
+  "step.ladder3": {
+    "sounds": [
+      {
+        "name": "step/ladder3"
+      }
+    ]
+  },
+  "step.ladder4": {
+    "sounds": [
+      {
+        "name": "step/ladder4"
+      }
+    ]
+  },
+  "step.ladder5": {
+    "sounds": [
+      {
+        "name": "step/ladder5"
+      }
+    ]
+  },
+  "step.sand1": {
+    "sounds": [
+      {
+        "name": "step/sand1"
+      }
+    ]
+  },
+  "step.sand2": {
+    "sounds": [
+      {
+        "name": "step/sand2"
+      }
+    ]
+  },
+  "step.sand3": {
+    "sounds": [
+      {
+        "name": "step/sand3"
+      }
+    ]
+  },
+  "step.sand4": {
+    "sounds": [
+      {
+        "name": "step/sand4"
+      }
+    ]
+  },
+  "step.sand5": {
+    "sounds": [
+      {
+        "name": "step/sand5"
+      }
+    ]
+  },
+  "step.scaffold1": {
+    "sounds": [
+      {
+        "name": "step/scaffold1"
+      }
+    ]
+  },
+  "step.scaffold2": {
+    "sounds": [
+      {
+        "name": "step/scaffold2"
+      }
+    ]
+  },
+  "step.scaffold3": {
+    "sounds": [
+      {
+        "name": "step/scaffold3"
+      }
+    ]
+  },
+  "step.scaffold4": {
+    "sounds": [
+      {
+        "name": "step/scaffold4"
+      }
+    ]
+  },
+  "step.scaffold5": {
+    "sounds": [
+      {
+        "name": "step/scaffold5"
+      }
+    ]
+  },
+  "step.scaffold6": {
+    "sounds": [
+      {
+        "name": "step/scaffold6"
+      }
+    ]
+  },
+  "step.scaffold7": {
+    "sounds": [
+      {
+        "name": "step/scaffold7"
+      }
+    ]
+  },
+  "step.snow1": {
+    "sounds": [
+      {
+        "name": "step/snow1"
+      }
+    ]
+  },
+  "step.snow2": {
+    "sounds": [
+      {
+        "name": "step/snow2"
+      }
+    ]
+  },
+  "step.snow3": {
+    "sounds": [
+      {
+        "name": "step/snow3"
+      }
+    ]
+  },
+  "step.snow4": {
+    "sounds": [
+      {
+        "name": "step/snow4"
+      }
+    ]
+  },
+  "step.wet_grass1": {
+    "sounds": [
+      {
+        "name": "step/wet_grass1"
+      }
+    ]
+  },
+  "step.wet_grass2": {
+    "sounds": [
+      {
+        "name": "step/wet_grass2"
+      }
+    ]
+  },
+  "step.wet_grass3": {
+    "sounds": [
+      {
+        "name": "step/wet_grass3"
+      }
+    ]
+  },
+  "step.wet_grass4": {
+    "sounds": [
+      {
+        "name": "step/wet_grass4"
+      }
+    ]
+  },
+  "step.wet_grass5": {
+    "sounds": [
+      {
+        "name": "step/wet_grass5"
+      }
+    ]
+  },
+  "step.wet_grass6": {
+    "sounds": [
+      {
+        "name": "step/wet_grass6"
+      }
+    ]
+  },
+  "step.wood1": {
+    "sounds": [
+      {
+        "name": "step/wood1"
+      }
+    ]
+  },
+  "step.wood2": {
+    "sounds": [
+      {
+        "name": "step/wood2"
+      }
+    ]
+  },
+  "step.wood3": {
+    "sounds": [
+      {
+        "name": "step/wood3"
+      }
+    ]
+  },
+  "step.wood4": {
+    "sounds": [
+      {
+        "name": "step/wood4"
+      }
+    ]
+  },
+  "step.wood5": {
+    "sounds": [
+      {
+        "name": "step/wood5"
+      }
+    ]
+  },
+  "step.wood6": {
+    "sounds": [
+      {
+        "name": "step/wood6"
+      }
+    ]
+  },
+  "step.cloth1": {
+    "sounds": [
+      {
+        "name": "step/cloth1"
+      }
+    ]
+  },
+  "step.cloth2": {
+    "sounds": [
+      {
+        "name": "step/cloth2"
+      }
+    ]
+  },
+  "step.cloth3": {
+    "sounds": [
+      {
+        "name": "step/cloth3"
+      }
+    ]
+  },
+  "step.cloth4": {
+    "sounds": [
+      {
+        "name": "step/cloth4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "random.anvil_break": {
+    "sounds": [
+      {
+        "name": "random/anvil_break"
+      }
+    ]
+  },
+  "random.anvil_land": {
+    "sounds": [
+      {
+        "name": "random/anvil_land"
+      }
+    ]
+  },
+  "random.anvil_use": {
+    "sounds": [
+      {
+        "name": "random/anvil_use"
+      }
+    ]
+  },
+  "random.click": {
+    "sounds": [
+      {
+        "name": "random/click"
+      }
+    ]
+  },
+  "random.bow": {
+    "sounds": [
+      {
+        "name": "random/bow"
+      }
+    ]
+  },
+  "random.explode1": {
+    "sounds": [
+      {
+        "name": "random/explode1"
+      }
+    ]
+  },
+  "random.explode2": {
+    "sounds": [
+      {
+        "name": "random/explode2"
+      }
+    ]
+  },
+  "random.explode3": {
+    "sounds": [
+      {
+        "name": "random/explode3"
+      }
+    ]
+  },
+  "random.explode4": {
+    "sounds": [
+      {
+        "name": "random/explode4"
+      }
+    ]
+  },
+  "random.fizz": {
+    "sounds": [
+      {
+        "name": "random/fizz"
+      }
+    ]
+  },
+  "random.glass1": {
+    "sounds": [
+      {
+        "name": "random/glass1"
+      }
+    ]
+  },
+  "random.glass2": {
+    "sounds": [
+      {
+        "name": "random/glass2"
+      }
+    ]
+  },
+  "random.glass3": {
+    "sounds": [
+      {
+        "name": "random/glass3"
+      }
+    ]
+  },
+  "random.bowhit1": {
+    "sounds": [
+      {
+        "name": "random/bowhit1"
+      }
+    ]
+  },
+  "random.bowhit2": {
+    "sounds": [
+      {
+        "name": "random/bowhit2"
+      }
+    ]
+  },
+  "random.bowhit3": {
+    "sounds": [
+      {
+        "name": "random/bowhit3"
+      }
+    ]
+  },
+  "random.bowhit4": {
+    "sounds": [
+      {
+        "name": "random/bowhit4"
+      }
+    ]
+  },
+  "random.wood_click": {
+    "sounds": [
+      {
+        "name": "random/wood_click",
+        "pitch": 0.6,
+        "volume": 0.3
+      }
+    ]
+  },
+  "random.successful_hit": {
+    "sounds": [
+      {
+        "name": "random/successful_hit"
+      }
+    ]
+  },
+  "random.fuse": {
+    "sounds": [
+      {
+        "name": "random/fuse"
+      }
+    ]
+  },
+  "random.orb": {
+    "sounds": [
+      {
+        "name": "random/orb"
+      }
+    ]
+  },
+  "random.splash": {
+    "sounds": [
+      {
+        "name": "random/splash"
+      }
+    ]
+  },
+  "random.drink": {
+    "sounds": [
+      {
+        "name": "random/drink",
+        "volume": 0.65
+      }
+    ]
+  },
+  "random.eat1": {
+    "sounds": [
+      {
+        "name": "random/eat1"
+      }
+    ]
+  },
+  "random.eat2": {
+    "sounds": [
+      {
+        "name": "random/eat2"
+      }
+    ]
+  },
+  "random.eat3": {
+    "sounds": [
+      {
+        "name": "random/eat3"
+      }
+    ]
+  },
+  "random.break": {
+    "sounds": [
+      {
+        "name": "random/break"
+      }
+    ]
+  },
+  "random.pop": {
+    "sounds": [
+      {
+        "name": "random/pop",
+        "pitch": 0.8,
+        "volume": 0.8
+      }
+    ]
+  },
+  "random.breath": {
+    "sounds": [
+      {
+        "name": "random/breath"
+      }
+    ]
+  },
+  "random.burp": {
+    "sounds": [
+      {
+        "name": "random/burp"
+      }
+    ]
+  },
+  "random.levelup": {
+    "sounds": [
+      {
+        "name": "random/levelup"
+      }
+    ]
+  },
+  "random.click_stereo": {
+    "sounds": [
+      {
+        "name": "random/click_stereo"
+      }
+    ]
+  }
+}

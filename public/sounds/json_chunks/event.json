@@ -1,0 +1,55 @@
+{
+  "event.mob_effects.bad_omen": {
+    "sounds": [
+      {
+        "name": "event/mob_effects/bad_omen"
+      }
+    ]
+  },
+  "event.mob_effects.raid_omen": {
+    "sounds": [
+      {
+        "name": "event/mob_effects/raid_omen"
+      }
+    ]
+  },
+  "event.mob_effects.trial_omen": {
+    "sounds": [
+      {
+        "name": "event/mob_effects/trial_omen"
+      }
+    ]
+  },
+  "event.raid.raidhorn_01": {
+    "sounds": [
+      {
+        "name": "event/raid/raidhorn_01",
+        "volume": 0.01
+      }
+    ]
+  },
+  "event.raid.raidhorn_02": {
+    "sounds": [
+      {
+        "name": "event/raid/raidhorn_02",
+        "volume": 0.01
+      }
+    ]
+  },
+  "event.raid.raidhorn_03": {
+    "sounds": [
+      {
+        "name": "event/raid/raidhorn_03",
+        "volume": 0.01
+      }
+    ]
+  },
+  "event.raid.raidhorn_04": {
+    "sounds": [
+      {
+        "name": "event/raid/raidhorn_04",
+        "volume": 0.01
+      }
+    ]
+  }
+}

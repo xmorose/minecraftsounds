@@ -1,0 +1,18 @@
+{
+  "tile.piston.in": {
+    "sounds": [
+      {
+        "attenuation_distance": 8,
+        "name": "tile/piston/in"
+      }
+    ]
+  },
+  "tile.piston.out": {
+    "sounds": [
+      {
+        "attenuation_distance": 8,
+        "name": "tile/piston/out"
+      }
+    ]
+  }
+}

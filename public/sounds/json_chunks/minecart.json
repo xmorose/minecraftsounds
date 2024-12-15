@@ -1,0 +1,37 @@
+{
+  "minecart.inside": {
+    "sounds": [
+      {
+        "name": "minecart/inside"
+      }
+    ]
+  },
+  "minecart.inside_underwater1": {
+    "sounds": [
+      {
+        "name": "minecart/inside_underwater1"
+      }
+    ]
+  },
+  "minecart.inside_underwater2": {
+    "sounds": [
+      {
+        "name": "minecart/inside_underwater2"
+      }
+    ]
+  },
+  "minecart.inside_underwater3": {
+    "sounds": [
+      {
+        "name": "minecart/inside_underwater3"
+      }
+    ]
+  },
+  "minecart.base": {
+    "sounds": [
+      {
+        "name": "minecart/base"
+      }
+    ]
+  }
+}

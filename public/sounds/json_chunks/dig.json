@@ -1,0 +1,258 @@
+{
+  "dig.stone1": {
+    "sounds": [
+      {
+        "name": "dig/stone1"
+      }
+    ]
+  },
+  "dig.stone2": {
+    "sounds": [
+      {
+        "name": "dig/stone2"
+      }
+    ]
+  },
+  "dig.stone3": {
+    "sounds": [
+      {
+        "name": "dig/stone3"
+      }
+    ]
+  },
+  "dig.stone4": {
+    "sounds": [
+      {
+        "name": "dig/stone4"
+      }
+    ]
+  },
+  "dig.coral1": {
+    "sounds": [
+      {
+        "name": "dig/coral1"
+      }
+    ]
+  },
+  "dig.coral2": {
+    "sounds": [
+      {
+        "name": "dig/coral2"
+      }
+    ]
+  },
+  "dig.coral3": {
+    "sounds": [
+      {
+        "name": "dig/coral3"
+      }
+    ]
+  },
+  "dig.coral4": {
+    "sounds": [
+      {
+        "name": "dig/coral4"
+      }
+    ]
+  },
+  "dig.grass1": {
+    "sounds": [
+      {
+        "name": "dig/grass1"
+      }
+    ]
+  },
+  "dig.grass2": {
+    "sounds": [
+      {
+        "name": "dig/grass2"
+      }
+    ]
+  },
+  "dig.grass3": {
+    "sounds": [
+      {
+        "name": "dig/grass3"
+      }
+    ]
+  },
+  "dig.grass4": {
+    "sounds": [
+      {
+        "name": "dig/grass4"
+      }
+    ]
+  },
+  "dig.gravel1": {
+    "sounds": [
+      {
+        "name": "dig/gravel1"
+      }
+    ]
+  },
+  "dig.gravel2": {
+    "sounds": [
+      {
+        "name": "dig/gravel2"
+      }
+    ]
+  },
+  "dig.gravel3": {
+    "sounds": [
+      {
+        "name": "dig/gravel3"
+      }
+    ]
+  },
+  "dig.gravel4": {
+    "sounds": [
+      {
+        "name": "dig/gravel4"
+      }
+    ]
+  },
+  "dig.wood1": {
+    "sounds": [
+      {
+        "name": "dig/wood1"
+      }
+    ]
+  },
+  "dig.wood2": {
+    "sounds": [
+      {
+        "name": "dig/wood2"
+      }
+    ]
+  },
+  "dig.wood3": {
+    "sounds": [
+      {
+        "name": "dig/wood3"
+      }
+    ]
+  },
+  "dig.wood4": {
+    "sounds": [
+      {
+        "name": "dig/wood4"
+      }
+    ]
+  },
+  "dig.sand1": {
+    "sounds": [
+      {
+        "name": "dig/sand1"
+      }
+    ]
+  },
+  "dig.sand2": {
+    "sounds": [
+      {
+        "name": "dig/sand2"
+      }
+    ]
+  },
+  "dig.sand3": {
+    "sounds": [
+      {
+        "name": "dig/sand3"
+      }
+    ]
+  },
+  "dig.sand4": {
+    "sounds": [
+      {
+        "name": "dig/sand4"
+      }
+    ]
+  },
+  "dig.snow1": {
+    "sounds": [
+      {
+        "name": "dig/snow1"
+      }
+    ]
+  },
+  "dig.snow2": {
+    "sounds": [
+      {
+        "name": "dig/snow2"
+      }
+    ]
+  },
+  "dig.snow3": {
+    "sounds": [
+      {
+        "name": "dig/snow3"
+      }
+    ]
+  },
+  "dig.snow4": {
+    "sounds": [
+      {
+        "name": "dig/snow4"
+      }
+    ]
+  },
+  "dig.wet_grass1": {
+    "sounds": [
+      {
+        "name": "dig/wet_grass1",
+        "volume": 0.8
+      }
+    ]
+  },
+  "dig.wet_grass2": {
+    "sounds": [
+      {
+        "name": "dig/wet_grass2",
+        "volume": 0.8
+      }
+    ]
+  },
+  "dig.wet_grass3": {
+    "sounds": [
+      {
+        "name": "dig/wet_grass3",
+        "volume": 0.8
+      }
+    ]
+  },
+  "dig.wet_grass4": {
+    "sounds": [
+      {
+        "name": "dig/wet_grass4",
+        "volume": 0.8
+      }
+    ]
+  },
+  "dig.cloth1": {
+    "sounds": [
+      {
+        "name": "dig/cloth1"
+      }
+    ]
+  },
+  "dig.cloth2": {
+    "sounds": [
+      {
+        "name": "dig/cloth2"
+      }
+    ]
+  },
+  "dig.cloth3": {
+    "sounds": [
+      {
+        "name": "dig/cloth3"
+      }
+    ]
+  },
+  "dig.cloth4": {
+    "sounds": [
+      {
+        "name": "dig/cloth4"
+      }
+    ]
+  }
+}
