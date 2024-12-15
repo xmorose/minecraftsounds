@@ -123,7 +123,8 @@
     "block.resin_bricks.hit",
     "block.resin_bricks.place",
     "block.resin_bricks.step",
-    "ui.hud.bubble_pop"
+    "ui.hud.bubble_pop",
+    "intentionally_empty"
   ],
   "version_1_20": [
     "entity.armadillo.ambient",
