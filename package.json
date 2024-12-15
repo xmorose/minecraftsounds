@@ -12,11 +12,14 @@
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.1.5",
+    "lodash": "^4.17.21",
     "tailwind-scrollbar-hide": "^1.1.7",
+    "three": "^0.170.0",
     "vue": "^3.4.29",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@types/three": "^0.169.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",

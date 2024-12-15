@@ -10,12 +10,32 @@ if (!fs.existsSync(outputDir)) {
 
 const soundsData = JSON.parse(fs.readFileSync(soundsFilePath, 'utf8'));
 
-function mergeSounds(existingSounds, newSounds) {
+function filterAndMergeSounds(existingSounds, newSounds) {
     for (const [key, value] of Object.entries(newSounds)) {
-        if (existingSounds[key]) {
-            existingSounds[key].sounds = existingSounds[key].sounds.concat(value.sounds);
-        } else {
-            existingSounds[key] = value;
+        const filteredSounds = value.sounds.filter(sound => {
+            if (typeof sound === 'string') return true;
+
+            return sound.type !== 'event' && sound.name && !sound.name.includes('.game');
+        });
+
+        if (filteredSounds.length > 0) {
+            if (existingSounds[key]) {
+                const existingSoundNames = new Set(existingSounds[key].sounds.map(s =>
+                    typeof s === 'string' ? s : s.name
+                ));
+
+                const newFilteredSounds = filteredSounds.filter(sound => {
+                    const soundName = typeof sound === 'string' ? sound : sound.name;
+                    return !existingSoundNames.has(soundName);
+                });
+
+                existingSounds[key].sounds = existingSounds[key].sounds.concat(newFilteredSounds);
+            } else {
+                existingSounds[key] = {
+                    ...value,
+                    sounds: filteredSounds
+                };
+            }
         }
     }
     return existingSounds;
@@ -32,7 +52,7 @@ Object.entries(soundsData).forEach(([key, data]) => {
         existingSoundData = JSON.parse(existingData);
     }
 
-    const updatedSoundData = mergeSounds(existingSoundData, {
+    const updatedSoundData = filterAndMergeSounds(existingSoundData, {
         [key]: data
     });
 
