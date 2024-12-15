@@ -7,9 +7,9 @@ function parseSoundsFromQuery(query) {
 
     while (query[`s${i}`]) {
         sounds.push({
-            id: query[`s${i}`],
-            p: parseFloat(query[`p${i}`] || '1.0'),
-            v: parseFloat(query[`v${i}`] || '1.0')
+            soundFileName: query[`s${i}`].replace(/\./g, '/'),
+            pitch: parseFloat(query[`p${i}`] || '1.0'),
+            volume: parseFloat(query[`v${i}`] || '1.0')
         });
         i++;
     }
@@ -24,9 +24,9 @@ const routes = [
         component: Home,
         props: (route) => ({
             category: route.params.category || '',
-            searchQueryProp: route.query.search || '',
-            tagsProp: route.query.tags ? route.query.tags.split(',') : [],
-            soundsProp: parseSoundsFromQuery(route.query)
+            searchQuery: route.query.search || '',
+            tags: route.query.tags ? route.query.tags.split(',') : [],
+            initialSounds: parseSoundsFromQuery(route.query)
         }),
     },
 ];

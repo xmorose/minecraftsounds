@@ -196,7 +196,7 @@ export default {
         i++;
       }
       soundsToLoad.forEach(soundParam => {
-        const soundFileName = soundParam.soundFileName.replace(/\./g, '/');
+        const soundFileName = soundParam.soundFileName;
 
         const originalSound = this.allSounds.find(s =>
             s.sounds.some(sound =>
@@ -205,9 +205,10 @@ export default {
         );
 
         if (originalSound) {
+          const folder = soundFileName.split('/')[0];
           this.selectedSounds.push({
             ...originalSound,
-            id: `${originalSound.id}_${soundFileName}`,
+            id: `${folder}_${originalSound.displayName}_${soundFileName}_0`,
             displayName: originalSound.displayName,
             soundFileName: soundFileName,
             pitch: soundParam.pitch,

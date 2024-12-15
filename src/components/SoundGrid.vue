@@ -251,7 +251,14 @@ export default {
       return {...soundItem, ...gridState};
     },
     isSelected(soundItem) {
-      return this.selectedSounds.some(s => s.id === soundItem.id);
+      return this.selectedSounds.some(s => {
+        if (soundItem.isGrouped) {
+          return s.id === soundItem.id;
+        } else {
+          return s.id === soundItem.id ||
+              (s.displayName === soundItem.displayName && s.soundFileName === soundItem.soundFileName);
+        }
+      });
     },
     toggleSelection(soundItem) {
       this.$emit('toggle-selection', this.getSoundItemWithGridState(soundItem));
