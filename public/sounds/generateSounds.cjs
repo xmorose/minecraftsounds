@@ -15,7 +15,7 @@ function filterAndMergeSounds(existingSounds, newSounds) {
         const filteredSounds = value.sounds.filter(sound => {
             if (typeof sound === 'string') return true;
 
-            return sound.type !== 'event' && sound.name && !sound.name.includes('.game');
+            return !sound.type || sound.type !== 'event';
         });
 
         if (filteredSounds.length > 0) {
@@ -56,6 +56,8 @@ Object.entries(soundsData).forEach(([key, data]) => {
         [key]: data
     });
 
-    fs.writeFileSync(outputFilePath, JSON.stringify(updatedSoundData, null, 2), 'utf8');
-    console.log(`Updated ${category}.json`);
+    if (Object.keys(updatedSoundData).length > 0) {
+        fs.writeFileSync(outputFilePath, JSON.stringify(updatedSoundData, null, 2), 'utf8');
+        console.log(`Updated ${category}.json`);
+    }
 });
