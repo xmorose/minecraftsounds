@@ -171,7 +171,7 @@ export default {
         }
       });
       this.selectedSounds.forEach((sound, index) => {
-        query[`s${index}`] = sound.displayName;
+        query[`s${index}`] = sound.soundFileName.replace(/\//g, '.');
         query[`p${index}`] = sound.pitch.toFixed(2);
         query[`v${index}`] = sound.volume.toFixed(1);
       });
@@ -187,21 +187,29 @@ export default {
     loadSoundsFromUrl() {
       let i = 0;
       const soundsToLoad = [];
-
       while (this.$route.query[`s${i}`]) {
         soundsToLoad.push({
-          id: this.$route.query[`s${i}`],
+          soundFileName: this.$route.query[`s${i}`].replace(/\./g, '/'),
           pitch: parseFloat(this.$route.query[`p${i}`] || '1.0'),
           volume: parseFloat(this.$route.query[`v${i}`] || '1.0')
         });
         i++;
       }
-
       soundsToLoad.forEach(soundParam => {
-        const sound = this.allSounds.find(s => s.displayName === soundParam.id);
-        if (sound) {
+        const soundFileName = soundParam.soundFileName.replace(/\./g, '/');
+
+        const originalSound = this.allSounds.find(s =>
+            s.sounds.some(sound =>
+                (typeof sound === 'object' ? sound.name : sound) === soundFileName
+            )
+        );
+
+        if (originalSound) {
           this.selectedSounds.push({
-            ...sound,
+            ...originalSound,
+            id: `${originalSound.id}_${soundFileName}`,
+            displayName: originalSound.displayName,
+            soundFileName: soundFileName,
             pitch: soundParam.pitch,
             volume: soundParam.volume
           });
@@ -217,12 +225,12 @@ export default {
     getFilteredSounds() {
       let filteredSounds = this.allSounds;
 
-      if (this.selectedTags.length > 0) {
+      if (this.selectedTags.length > 0 && Object.keys(this.soundTags).length > 0) {
         filteredSounds = filteredSounds.filter(sound =>
             this.selectedTags.every(tag =>
-                this.soundTags[tag].includes(sound.displayName) ||
+                this.soundTags[tag]?.includes(sound.displayName) ||
                 (this.searchOptions.includeDescriptions &&
-                    sound.sounds.some(s => this.soundTags[tag].includes(s.name || s)))
+                    sound.sounds.some(s => this.soundTags[tag]?.includes(s.name || s)))
             )
         );
       }
@@ -232,7 +240,7 @@ export default {
       return Object.keys(this.soundTags);
     },
     updateSearchOptions(options) {
-      this.searchOptions = { ...this.searchOptions, ...options };
+      this.searchOptions = {...this.searchOptions, ...options};
     },
     filteredSounds() {
       return this.allSounds.filter(sound => {
@@ -303,7 +311,7 @@ export default {
       this.updateRoute();
     },
     updateRoute() {
-      const currentQuery = { ...this.$route.query };
+      const currentQuery = {...this.$route.query};
       const soundParams = {};
       Object.keys(currentQuery).forEach(key => {
         if (key.match(/^[spv]\d+$/)) {
@@ -433,21 +441,30 @@ export default {
     }
   },
   mounted() {
-    this.selectedFolder = this.$route.params.category || '';
-    this.searchQuery = this.$route.query.search || '';
-    this.selectedTags = this.$route.query.tags ? this.$route.query.tags.split(',') : [];
-    this.fetchAllSounds().then(() => {
+    Promise.all([
+      this.fetchAllSounds(),
+      this.fetchSoundTags()
+    ]).then(() => {
+      this.selectedFolder = this.$route.params.category || '';
+      this.searchQuery = this.$route.query.search || '';
+      this.selectedTags = this.$route.query.tags ? this.$route.query.tags.split(',') : [];
       this.loadSoundsFromUrl();
+      this.getFilteredSounds();
     });
-      this.fetchSoundTags();
-    },
-  watch: {
-    $route(to, from) {
-      this.selectedFolder = to.params.category || '';
-      this.searchQuery = to.query.search || '';
-      this.selectedTags = to.query.tags ? to.query.tags.split(',') : [];
-    },
   },
+
+  watch: {
+    '$route'(to) {
+      if (Object.keys(this.soundTags).length > 0) {
+        this.selectedTags = to.query.tags ? to.query.tags.split(',') : [];
+        this.selectedFolder = to.params.category || '';
+        this.searchQuery = to.query.search || '';
+        this.$nextTick(() => {
+          this.getFilteredSounds();
+        });
+      }
+    }
+  }
 };
 </script>
 
