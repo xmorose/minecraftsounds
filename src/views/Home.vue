@@ -72,7 +72,7 @@ import SoundSelection from '../components/SoundSelection.vue';
 import Notification from '../components/Notification.vue';
 import TagSelection from "@/components/TagSelection.vue";
 import Credit from "@/components/Credit.vue";
-
+import { debounce } from 'lodash';
 export default {
   components: {
     FilterSidebar,
@@ -83,11 +83,15 @@ export default {
     Credit,
   },
   data() {
+    const hashContent = window.location.hash.slice(1);
+    const [category, queryString] = hashContent.split('?');
+    const urlParams = new URLSearchParams(queryString || '');
     return {
-      selectedFolder: '',
-      selectedTags: [],
+      updateUrlDebounced: null,
+      selectedFolder: category || '',
+      selectedTags: urlParams.get('tags')?.split(',') || [],
+      searchQuery: urlParams.get('search') || '',
       soundTags: {},
-      searchQuery: '',
       selectedSounds: [],
       allSounds: [],
       showNotificationFlag: false,
@@ -162,42 +166,56 @@ export default {
       return counts;
     }
   },
-  methods: {
-    updateUrlWithSounds() {
-      const query = {...this.$route.query};
-      Object.keys(query).forEach(key => {
-        if (key.match(/^[spv]\d+$/)) {
-          delete query[key];
-        }
-      });
-      this.selectedSounds.forEach((sound, index) => {
-        query[`s${index}`] = sound.soundFileName.replace(/\//g, '.');
-        query[`p${index}`] = sound.pitch.toFixed(2);
-        query[`v${index}`] = sound.volume.toFixed(1);
-      });
-      if (this.searchQuery) query.search = this.searchQuery;
-      if (this.selectedTags.length) query.tags = this.selectedTags.join(',');
+  created() {
+    this.updateUrlDebounced = debounce(() => {
+      const urlParams = new URLSearchParams();
 
-      this.$router.push({
-        name: 'Home',
-        params: {category: this.selectedFolder || undefined},
-        query
+      this.selectedSounds.forEach((sound, index) => {
+        urlParams.set(`s${index}`, sound.soundFileName.replace(/\//g, '.'));
+        urlParams.set(`p${index}`, sound.pitch.toFixed(2));
+        urlParams.set(`v${index}`, sound.volume.toFixed(1));
       });
-    },
-    loadSoundsFromUrl() {
+
+      if (this.searchQuery) urlParams.set('search', this.searchQuery);
+      if (this.selectedTags.length) urlParams.set('tags', this.selectedTags.join(','));
+
+      window.location.hash = `${this.selectedFolder}?${urlParams.toString()}`;
+    }, 250);
+  },
+  methods: {
+    async loadFromUrl() {
+      const hashContent = window.location.hash.slice(1);
+      const [category, queryString] = hashContent.split('?');
+
+      const urlParams = new URLSearchParams(queryString || '');
+      const tags = urlParams.get('tags')?.split(',') || [];
+      const search = urlParams.get('search') || '';
+
+      await Promise.all([
+        this.fetchAllSounds(),
+        this.fetchSoundTags()
+      ]);
+
+      this.selectedFolder = category || '';
+      this.selectedTags = tags;
+      this.searchQuery = search;
+
       let i = 0;
       const soundsToLoad = [];
-      while (this.$route.query[`s${i}`]) {
+
+      while (urlParams.has(`s${i}`)) {
         soundsToLoad.push({
-          soundFileName: this.$route.query[`s${i}`].replace(/\./g, '/'),
-          pitch: parseFloat(this.$route.query[`p${i}`] || '1.0'),
-          volume: parseFloat(this.$route.query[`v${i}`] || '1.0')
+          soundFileName: urlParams.get(`s${i}`).replace(/\./g, '/'),
+          pitch: parseFloat(urlParams.get(`p${i}`) || '1.0'),
+          volume: parseFloat(urlParams.get(`v${i}`) || '1.0')
         });
         i++;
       }
+
+      this.selectedSounds = [];
+
       soundsToLoad.forEach(soundParam => {
         const soundFileName = soundParam.soundFileName;
-
         const originalSound = this.allSounds.find(soundGroup =>
             soundGroup.sounds.some(sound =>
                 (typeof sound === 'object' ? sound.name : sound) === soundFileName
@@ -214,25 +232,37 @@ export default {
             pitch: soundParam.pitch,
             volume: soundParam.volume
           };
-          const existingIndex = this.selectedSounds.findIndex(
-              s => s.id === soundToAdd.id
-          );
-          if (existingIndex === -1) {
-            this.selectedSounds.push(soundToAdd);
-          }
+
+          this.selectedSounds.push(soundToAdd);
         }
       });
+
+      await this.$nextTick(() => {
+        this.getFilteredSounds();
+      });
+    },
+    updateUrlWithSounds() {
+      this.updateUrlDebounced();
     },
     addTag(tag) {
       if (!this.selectedTags.includes(tag)) {
         this.selectedTags.push(tag);
-        this.updateRoute();
+        this.updateUrlWithSounds();
       }
     },
     getFilteredSounds() {
+      if (!this.allSounds.length || !Object.keys(this.soundTags).length) {
+        return [];
+      }
       let filteredSounds = this.allSounds;
-
-      if (this.selectedTags.length > 0 && Object.keys(this.soundTags).length > 0) {
+      if (this.selectedFolder) {
+        filteredSounds = filteredSounds.filter(sound => {
+          return sound.sounds.some(s =>
+              (typeof s === 'object' ? s.name : s).startsWith(this.selectedFolder + '/')
+          );
+        });
+      }
+      if (this.selectedTags.length > 0) {
         filteredSounds = filteredSounds.filter(sound =>
             this.selectedTags.every(tag =>
                 this.soundTags[tag]?.includes(sound.displayName) ||
@@ -241,21 +271,16 @@ export default {
             )
         );
       }
+      if (this.searchQuery) {
+        const query = this.searchQuery.toLowerCase();
+        filteredSounds = filteredSounds.filter(sound =>
+            sound.displayName.toLowerCase().includes(query)
+        );
+      }
       return filteredSounds;
-    },
-    availableTags() {
-      return Object.keys(this.soundTags);
     },
     updateSearchOptions(options) {
       this.searchOptions = {...this.searchOptions, ...options};
-    },
-    filteredSounds() {
-      return this.allSounds.filter(sound => {
-        const matchesFolder = !this.selectedFolder || sound.folder === this.selectedFolder;
-        const matchesTags = this.selectedTags.length === 0 || this.selectedTags.some(tag => this.soundTags[tag]?.includes(sound.id));
-        const matchesSearch = !this.searchQuery || sound.displayName.toLowerCase().includes(this.searchQuery.toLowerCase());
-        return matchesFolder && matchesTags && matchesSearch;
-      });
     },
     toggleSoundSelection(soundItem) {
       const index = this.selectedSounds.findIndex(s => {
@@ -300,8 +325,19 @@ export default {
       }
     },
     updateGridSoundPitch(soundItem, pitch) {
+      const index = this.selectedSounds.findIndex(s => s.id === soundItem.id);
+      if (index !== -1) {
+        this.selectedSounds[index].pitch = pitch;
+        this.updateUrlWithSounds();
+      }
     },
+
     updateGridSoundVolume(soundItem, volume) {
+      const index = this.selectedSounds.findIndex(s => s.id === soundItem.id);
+      if (index !== -1) {
+        this.selectedSounds[index].volume = volume;
+        this.updateUrlWithSounds();
+      }
     },
     async fetchAllSounds() {
       try {
@@ -319,30 +355,17 @@ export default {
     },
     updateSelectedFolder(folder) {
       this.selectedFolder = folder;
-      this.updateRoute();
+      this.updateUrlWithSounds();
     },
+
     updateSearchQuery(query) {
       this.searchQuery = query;
-      this.updateRoute();
+      this.updateUrlWithSounds();
     },
-    updateRoute() {
-      const currentQuery = {...this.$route.query};
-      const soundParams = {};
-      Object.keys(currentQuery).forEach(key => {
-        if (key.match(/^[spv]\d+$/)) {
-          soundParams[key] = currentQuery[key];
-        }
-      });
 
-      this.$router.push({
-        name: 'Home',
-        params: {category: this.selectedFolder || undefined},
-        query: {
-          ...soundParams,
-          search: this.searchQuery || undefined,
-          tags: this.selectedTags.length > 0 ? this.selectedTags.join(',') : undefined
-        },
-      });
+    updateSelectedTags(tags) {
+      this.selectedTags = tags;
+      this.updateUrlWithSounds();
     },
     async playSound(soundItem) {
       try {
@@ -450,36 +473,35 @@ export default {
         this.soundTags = {};
       }
     },
-    updateSelectedTags(tags) {
-      this.selectedTags = tags;
-      this.updateRoute();
-    }
   },
   mounted() {
-    Promise.all([
-      this.fetchAllSounds(),
-      this.fetchSoundTags()
-    ]).then(() => {
-      this.selectedFolder = this.$route.params.category || '';
-      this.searchQuery = this.$route.query.search || '';
-      this.selectedTags = this.$route.query.tags ? this.$route.query.tags.split(',') : [];
-      this.loadSoundsFromUrl();
-      this.getFilteredSounds();
-    });
+    this.loadFromUrl();
   },
-
+  beforeDestroy() {
+    if (this.updateUrlDebounced) {
+      this.updateUrlDebounced.cancel();
+    }
+  },
   watch: {
-    '$route'(to) {
-      if (Object.keys(this.soundTags).length > 0) {
-        this.selectedTags = to.query.tags ? to.query.tags.split(',') : [];
-        this.selectedFolder = to.params.category || '';
-        this.searchQuery = to.query.search || '';
+    selectedFolder() {
+      this.$nextTick(() => {
+        this.getFilteredSounds();
+      });
+    },
+    selectedTags: {
+      handler() {
         this.$nextTick(() => {
           this.getFilteredSounds();
         });
-      }
+      },
+      deep: true
+    },
+    searchQuery() {
+      this.$nextTick(() => {
+        this.getFilteredSounds();
+      });
     }
-  }
+  },
 };
 </script>
 
