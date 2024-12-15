@@ -198,22 +198,28 @@ export default {
       soundsToLoad.forEach(soundParam => {
         const soundFileName = soundParam.soundFileName;
 
-        const originalSound = this.allSounds.find(s =>
-            s.sounds.some(sound =>
+        const originalSound = this.allSounds.find(soundGroup =>
+            soundGroup.sounds.some(sound =>
                 (typeof sound === 'object' ? sound.name : sound) === soundFileName
             )
         );
 
         if (originalSound) {
           const folder = soundFileName.split('/')[0];
-          this.selectedSounds.push({
+          const soundToAdd = {
             ...originalSound,
             id: `${folder}_${originalSound.displayName}_${soundFileName}_0`,
             displayName: originalSound.displayName,
             soundFileName: soundFileName,
             pitch: soundParam.pitch,
             volume: soundParam.volume
-          });
+          };
+          const existingIndex = this.selectedSounds.findIndex(
+              s => s.id === soundToAdd.id
+          );
+          if (existingIndex === -1) {
+            this.selectedSounds.push(soundToAdd);
+          }
         }
       });
     },
@@ -252,7 +258,15 @@ export default {
       });
     },
     toggleSoundSelection(soundItem) {
-      const index = this.selectedSounds.findIndex(s => s.id === soundItem.id);
+      const index = this.selectedSounds.findIndex(s => {
+        if (soundItem.isGrouped && s.isGrouped) {
+          return s.id === soundItem.id;
+        }
+        return s.id === soundItem.id ||
+            (s.displayName === soundItem.displayName &&
+                s.soundFileName === soundItem.soundFileName);
+      });
+
       if (index === -1) {
         this.selectedSounds.push({...soundItem});
       } else {
