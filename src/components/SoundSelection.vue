@@ -48,6 +48,9 @@
       <button @click="copyMMCommand" class="bg-green-600 hover:bg-green-700 px-3 py-1 rounded text-xs">
         <i class="fas fa-copy mr-1"></i> Copy MM Command
       </button>
+      <button @click="copyShareLink" class="bg-indigo-600 hover:bg-indigo-700 px-3 py-1 rounded text-xs">
+        <i class="fas fa-link mr-1"></i> Copy Link
+      </button>
       <button @click="copyIds" class="bg-yellow-600 hover:bg-yellow-700 px-3 py-1 rounded text-xs">
         <i class="fas fa-clipboard mr-1"></i> Copy IDs
       </button>
@@ -67,7 +70,31 @@ export default {
     },
   },
   methods: {
-    removeSound(sound) {
+    async shareSelection() {
+      const url = window.location.href;
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: 'Minecraft Sounds Selection',
+            url: url
+          });
+          this.$emit('show-notification', 'Shared', 'Selection shared successfully');
+        } catch (err) {
+          if (err.name !== 'AbortError') {
+            this.copyShareLink();
+          }
+        }
+      } else {
+        this.copyShareLink();
+      }
+    },
+    copyShareLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url)
+          .then(() => this.$emit('show-notification', 'Copied', 'Link copied to clipboard'))
+          .catch(() => this.$emit('show-notification', 'Error', 'Failed to copy link'));
+    },
+  removeSound(sound) {
       this.$emit('remove-sound', sound);
     },
     updatePitch(sound, value) {
