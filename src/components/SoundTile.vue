@@ -1,12 +1,19 @@
 <template>
   <div class="sound-tile relative bg-gray-800 p-4 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300">
-    <div class="absolute top-2 right-2 flex space-x-2">
+    <div class="absolute top-2 right-2 flex flex-col space-y-2">
       <button
           @click.stop="toggleSelection"
           class="w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200"
           :class="{ 'bg-blue-500 hover:bg-blue-600': isSelected, 'bg-gray-600 hover:bg-gray-500': !isSelected }"
       >
         <i class="fas" :class="{ 'fa-minus': isSelected, 'fa-plus': !isSelected }"></i>
+      </button>
+      <button
+          @click.stop="handleFavoriteToggle"
+          class="w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200"
+          :class="{ 'bg-red-500 hover:bg-red-600': isFavorited, 'bg-gray-600 hover:bg-gray-500': !isFavorited }"
+      >
+        <i class="fas fa-heart"></i>
       </button>
     </div>
     <h3 class="text-base md:text-lg font-semibold mb-1 break-words">{{ soundItem.displayName }}</h3>
@@ -80,6 +87,9 @@
 </template>
 
 <script>
+import { useFavorites } from '../composables/useFavorites';
+import { computed } from 'vue';
+
 export default {
   props: {
     soundItem: {
@@ -95,7 +105,19 @@ export default {
       default: () => []
     }
   },
+  setup(props) {
+    const favoritesManager = useFavorites();
+    const isFavorited = computed(() => favoritesManager.isFavorite(props.soundItem));
+
+    return {
+      isFavorited,
+      favoritesManager
+    };
+  },
   methods: {
+    handleFavoriteToggle() {
+      this.favoritesManager.toggleFavorite(this.soundItem);
+    },
     toggleSelection() {
       this.$emit('toggle-selection', this.soundItem);
     },
@@ -119,6 +141,6 @@ export default {
       }
       return tag.replace(/_/g, ' ');
     }
-  },
+  }
 };
 </script>

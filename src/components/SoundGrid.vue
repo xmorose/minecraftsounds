@@ -29,8 +29,16 @@
 
 <script>
 import SoundTile from './SoundTile.vue';
+import { useFavorites } from '../composables/useFavorites';
 
 export default {
+  setup() {
+    const {getFavoriteSounds} = useFavorites();
+
+    return {
+      getFavoriteSounds,
+    };
+  },
   components: {
     SoundTile,
   },
@@ -150,9 +158,9 @@ export default {
       this.loadMoreItems();
     },
     filterSounds() {
-
       const query = this.searchQuery ? this.searchQuery.toLowerCase().split(/\s+/) : [];
       let filteredSounds = this.soundItems;
+      const { favoriteSounds } = useFavorites();
 
       if (query.length) {
         filteredSounds = filteredSounds.filter((soundItem) => {
@@ -172,9 +180,35 @@ export default {
         });
       }
 
-      if (this.selectedTags.length > 0) {
+      if (this.selectedTags.includes('favorites')) {
+        if (this.searchOptions.groupSimilarSounds) {
+          const groupedSounds = this.groupSimilarSounds(filteredSounds);
+          filteredSounds = groupedSounds.filter(group => {
+            const groupId = `group:${group.displayName}`;
+            return favoriteSounds.value.includes(groupId);
+          });
+        } else {
+          filteredSounds = filteredSounds.filter(sound => {
+            return favoriteSounds.value.some(favorite => {
+              if (favorite.startsWith('group:')) return false;
+              try {
+                const favoriteData = JSON.parse(favorite);
+                return favoriteData.fileName === sound.soundFileName &&
+                    favoriteData.displayName === sound.displayName;
+              } catch (e) {
+                return false;
+              }
+            });
+          });
+        }
+      } else if (this.searchOptions.groupSimilarSounds) {
+        filteredSounds = this.groupSimilarSounds(filteredSounds);
+      }
+
+      const regularTags = this.selectedTags.filter(tag => tag !== 'favorites');
+      if (regularTags.length > 0) {
         filteredSounds = filteredSounds.filter((soundItem) => {
-          return this.selectedTags.every(tag => {
+          return regularTags.every(tag => {
             const tagSounds = this.soundTags[tag] || [];
             return tagSounds.some(tagSound =>
                 soundItem.displayName.toLowerCase().includes(tagSound.toLowerCase()) ||
@@ -182,10 +216,6 @@ export default {
             );
           });
         });
-      }
-
-      if (this.searchOptions.groupSimilarSounds) {
-        filteredSounds = this.groupSimilarSounds(filteredSounds);
       }
 
       return filteredSounds;
@@ -209,18 +239,24 @@ export default {
     },
     groupSimilarSounds(sounds) {
       const groupedSounds = {};
+      const { favoriteSounds } = useFavorites();
+
       sounds.forEach(sound => {
         const baseName = sound.displayName.replace(/\d+$/, '').trim();
+
         if (!groupedSounds[baseName]) {
           groupedSounds[baseName] = {
             ...sound,
             id: `group_${baseName}`,
             displayName: baseName,
             isGrouped: true,
-            groupedSounds: []
+            groupedSounds: [],
+            sounds: []
           };
         }
+
         groupedSounds[baseName].groupedSounds.push(sound);
+        groupedSounds[baseName].sounds.push(sound.soundFileName);
       });
       return Object.values(groupedSounds);
     },

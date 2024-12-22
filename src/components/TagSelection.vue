@@ -1,7 +1,16 @@
 <template>
   <div class="tag-selection bg-gray-800 p-2 rounded-md flex items-center">
     <button
-        v-for="tag in sortedTags"
+        @click="toggleTag('favorites')"
+        class="inline-block px-3 py-1 rounded-full text-sm mr-3 my-1 transition-colors duration-200 relative"
+        :class="selectedTags.includes('favorites') ? 'bg-red-500 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'"
+    >
+      <i class="fas fa-heart mr-1"></i>
+      Favorites ({{ favoritesCount }})
+    </button>
+
+    <button
+        v-for="tag in filteredSortedTags"
         :key="tag"
         @click="toggleTag(tag)"
         class="inline-block px-3 py-1 rounded-full text-sm mr-3 my-1 transition-colors duration-200 relative"
@@ -10,7 +19,11 @@
       {{ formatTag(tag) }}
     </button>
   </div>
-</template><script>
+</template>
+
+<script>
+import { useFavorites } from '../composables/useFavorites';
+
 export default {
   name: 'TagSelection',
   props: {
@@ -31,7 +44,17 @@ export default {
       required: true
     }
   },
+  setup() {
+    const {favoriteCount} = useFavorites();
+
+    return {
+      favoritesCount: favoriteCount
+    };
+  },
   computed: {
+    filteredSortedTags() {
+      return this.sortedTags.filter(tag => tag !== 'favorites');
+    },
     sortedTags() {
       return this.availableTags.sort((a, b) => {
         const indexA = this.customTagOrder.indexOf(a);
@@ -51,6 +74,7 @@ export default {
       this.$emit('update:selectedTags', updatedTags);
     },
     formatTag(tag) {
+      if (tag === 'favorites') return 'Favorites';
       if (tag.startsWith('version_')) {
         return tag.replace('version_', '').replace(/_/g, '.');
       }
