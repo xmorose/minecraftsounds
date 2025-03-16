@@ -54,6 +54,9 @@
       <button @click="copyIds" class="bg-yellow-600 hover:bg-yellow-700 px-3 py-1 rounded text-xs">
         <i class="fas fa-clipboard mr-1"></i> Copy IDs
       </button>
+      <button @click="copyEvent" class="bg-purple-600 hover:bg-purple-700 px-3 py-1 rounded text-xs">
+        <i class="fas fa-file-code mr-1"></i> Copy Event
+      </button>
       <button @click="clearSelection" class="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-xs">
         <i class="fas fa-trash-alt mr-1"></i> Clear All
       </button>
@@ -94,7 +97,7 @@ export default {
           .then(() => this.$emit('show-notification', 'Copied', 'Link copied to clipboard'))
           .catch(() => this.$emit('show-notification', 'Error', 'Failed to copy link'));
     },
-  removeSound(sound) {
+    removeSound(sound) {
       this.$emit('remove-sound', sound);
     },
     updatePitch(sound, value) {
@@ -115,6 +118,33 @@ export default {
     copyIds() {
       const ids = this.selectedSounds.map(sound => `minecraft:${sound.displayName}`).join(', ');
       this.copyToClipboard(ids, 'Sound IDs');
+    },
+    copyEvent() {
+      const soundsJson = this.selectedSounds.map(sound => {
+        if (sound.isGrouped) {
+          return {
+            type: "event",
+            name: `minecraft:${sound.displayName}`,
+            pitch: parseFloat(sound.pitch.toFixed(2)),
+            volume: parseFloat(sound.volume.toFixed(1))
+          };
+        } else {
+          return {
+            type: "file",
+            name: sound.soundFileName,
+            pitch: parseFloat(sound.pitch.toFixed(2)),
+            volume: parseFloat(sound.volume.toFixed(1))
+          };
+        }
+      });
+
+      const eventJson = {
+        sounds: soundsJson,
+        subtitle: `subtitles.custom.sound_event`
+      };
+
+      const formattedJson = JSON.stringify(eventJson, null, 4);
+      this.copyToClipboard(formattedJson, 'Sound Event');
     },
     clearSelection() {
       this.$emit('clear-selection');
