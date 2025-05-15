@@ -25,6 +25,7 @@
               @update-pitch="updateSelectedSoundPitch"
               @update-volume="updateSelectedSoundVolume"
               @show-notification="showNotification"
+              @play-single-sound="playSound"
           />
         </div>
         <div class="p-4" :style="{ paddingBottom: tagSelectionPadding + 'px' }">
@@ -369,7 +370,6 @@ export default {
     },
     async playSound(soundItem) {
       try {
-        // Stop all currently playing sounds
         this.stopAllSounds();
 
         if (!this.audioContext) {
@@ -391,10 +391,8 @@ export default {
 
         sourceNode.playbackRate.value = soundItem.pitch;
 
-        // Add the new source to our active sources array
         this.activeSoundSources.push(sourceNode);
 
-        // Remove the source from the array when it finishes playing
         sourceNode.onended = () => {
           const index = this.activeSoundSources.indexOf(sourceNode);
           if (index !== -1) {

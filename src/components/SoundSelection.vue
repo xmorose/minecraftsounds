@@ -5,17 +5,27 @@
       No sounds selected
     </div>
     <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-      <div v-for="sound in selectedSounds" :key="sound.id" class="bg-gray-700 p-2 rounded-lg text-xs">
+      <div v-for="sound in selectedSounds"
+           :key="sound.id"
+           class="bg-gray-700 p-2 rounded-lg text-xs cursor-pointer"
+           @click="playSingleSound(sound)">
         <div class="flex justify-between items-center mb-1">
-          <span class="truncate mr-2">{{ sound.displayName }}</span>
-          <button @click="removeSound(sound)" class="text-red-500 hover:text-red-700">
+          <div class="flex items-center flex-grow min-w-0">
+            <button @click.stop="playSingleSound(sound)"
+                    class="text-green-500 hover:text-green-700 mr-2 focus:outline-none">
+              <i class="fas fa-play"></i>
+            </button>
+            <span class="truncate">{{ sound.displayName }}</span>
+          </div>
+          <button @click.stop="removeSound(sound)"
+                  class="text-red-500 hover:text-red-700 ml-2 focus:outline-none">
             <i class="fas fa-times"></i>
           </button>
         </div>
-        <div v-if="sound.isGrouped" class="text-gray-400 text-xs mb-1">
+        <div v-if="sound.isGrouped" class="text-gray-400 text-xs mb-1" @click.stop>
           Group: {{ sound.groupedSounds.length }} sounds
         </div>
-        <div class="mb-1">
+        <div @click.stop class="mb-1">
           <label class="block text-gray-400 text-xs">Pitch: {{ sound.pitch.toFixed(2) }}</label>
           <input
               type="range"
@@ -27,7 +37,7 @@
               class="w-full h-1"
           />
         </div>
-        <div>
+        <div @click.stop>
           <label class="block text-gray-400 text-xs">Volume: {{ sound.volume.toFixed(1) }}</label>
           <input
               type="range"
@@ -105,6 +115,9 @@ export default {
     },
     updateVolume(sound, value) {
       this.$emit('update-volume', sound, Number(value));
+    },
+    playSingleSound(sound) {
+      this.$emit('play-single-sound', sound);
     },
     playAllSounds() {
       this.$emit('play-all');
