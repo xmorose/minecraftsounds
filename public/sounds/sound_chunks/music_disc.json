@@ -150,5 +150,21 @@
         "stream": true
       }
     ]
+  },
+  "music_disc.lava_chicken": {
+    "sounds": [
+      {
+        "name": "records/lava_chicken",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.tears": {
+    "sounds": [
+      {
+        "name": "records/tears",
+        "stream": true
+      }
+    ]
   }
 }

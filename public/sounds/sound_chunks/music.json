@@ -150,6 +150,31 @@
         "name": "music/game/yakusoku",
         "stream": true,
         "volume": 0.8
+      },
+      {
+        "name": "music/game/below_and_above",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/broken_clocks",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/fireflies",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/lilypad",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/os_piano",
+        "stream": true,
+        "volume": 0.4
       }
     ]
   },
@@ -215,6 +240,31 @@
       {
         "name": "music/menu/mutation",
         "stream": true
+      },
+      {
+        "name": "music/game/below_and_above",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/broken_clocks",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/fireflies",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/lilypad",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/os_piano",
+        "stream": true,
+        "volume": 0.4
       }
     ]
   },
@@ -470,6 +520,12 @@
       {
         "name": "music/game/sweden",
         "stream": true
+      },
+      {
+        "name": "music/game/below_and_above",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
       }
     ]
   },
@@ -522,6 +578,12 @@
       {
         "name": "music/game/subwoofer_lullaby",
         "stream": true
+      },
+      {
+        "name": "music/game/fireflies",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
       }
     ]
   },
@@ -721,6 +783,12 @@
       {
         "name": "music/game/wet_hands",
         "stream": true
+      },
+      {
+        "name": "music/game/broken_clocks",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
       }
     ]
   },
@@ -759,6 +827,11 @@
       {
         "name": "music/game/wet_hands",
         "stream": true
+      },
+      {
+        "name": "music/game/lilypad",
+        "stream": true,
+        "volume": 0.4
       }
     ]
   },
@@ -817,6 +890,12 @@
         "name": "music/game/wending",
         "stream": true,
         "volume": 0.4
+      },
+      {
+        "name": "music/game/lilypad",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
       }
     ]
   },
@@ -1001,6 +1080,12 @@
       {
         "name": "music/game/sweden",
         "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/os_piano",
+        "stream": true,
+        "volume": 0.4,
         "weight": 2
       }
     ]

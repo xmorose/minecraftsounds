@@ -1553,7 +1553,12 @@
       "entity/horse/eat2",
       "entity/horse/eat3",
       "entity/horse/eat4",
-      "entity/horse/eat5"
+      "entity/horse/eat5",
+      "mob/horse/eat1",
+      "mob/horse/eat2",
+      "mob/horse/eat3",
+      "mob/horse/eat4",
+      "mob/horse/eat5"
     ],
     "subtitle": "subtitles.entity.donkey.eat"
   },
@@ -2670,7 +2675,12 @@
       "entity/glow_squid/ambient2",
       "entity/glow_squid/ambient3",
       "entity/glow_squid/ambient4",
-      "entity/glow_squid/ambient5"
+      "entity/glow_squid/ambient5",
+      "mob/glow_squid/ambient1",
+      "mob/glow_squid/ambient2",
+      "mob/glow_squid/ambient3",
+      "mob/glow_squid/ambient4",
+      "mob/glow_squid/ambient5"
     ],
     "subtitle": "subtitles.entity.glow_squid.ambient"
   },
@@ -2678,7 +2688,10 @@
     "sounds": [
       "entity/glow_squid/death1",
       "entity/glow_squid/death2",
-      "entity/glow_squid/death3"
+      "entity/glow_squid/death3",
+      "mob/glow_squid/death1",
+      "mob/glow_squid/death2",
+      "mob/glow_squid/death3"
     ],
     "subtitle": "subtitles.entity.glow_squid.death"
   },
@@ -2687,7 +2700,11 @@
       "entity/glow_squid/hurt1",
       "entity/glow_squid/hurt2",
       "entity/glow_squid/hurt3",
-      "entity/glow_squid/hurt4"
+      "entity/glow_squid/hurt4",
+      "mob/glow_squid/hurt1",
+      "mob/glow_squid/hurt2",
+      "mob/glow_squid/hurt3",
+      "mob/glow_squid/hurt4"
     ],
     "subtitle": "subtitles.entity.glow_squid.hurt"
   },
@@ -2695,7 +2712,10 @@
     "sounds": [
       "entity/glow_squid/squirt1",
       "entity/glow_squid/squirt2",
-      "entity/glow_squid/squirt3"
+      "entity/glow_squid/squirt3",
+      "mob/glow_squid/squirt1",
+      "mob/glow_squid/squirt2",
+      "mob/glow_squid/squirt3"
     ],
     "subtitle": "subtitles.entity.glow_squid.squirt"
   },
@@ -3098,7 +3118,11 @@
       {
         "name": "entity/guardian/ambient4",
         "volume": 0.1
-      }
+      },
+      "mob/guardian/guardian_idle1",
+      "mob/guardian/guardian_idle2",
+      "mob/guardian/guardian_idle3",
+      "mob/guardian/guardian_idle4"
     ],
     "subtitle": "subtitles.entity.guardian.ambient"
   },
@@ -3365,7 +3389,12 @@
       "entity/horse/eat2",
       "entity/horse/eat3",
       "entity/horse/eat4",
-      "entity/horse/eat5"
+      "entity/horse/eat5",
+      "mob/horse/eat1",
+      "mob/horse/eat2",
+      "mob/horse/eat3",
+      "mob/horse/eat4",
+      "mob/horse/eat5"
     ],
     "subtitle": "subtitles.entity.horse.eat"
   },
@@ -4029,7 +4058,12 @@
       "entity/horse/eat2",
       "entity/horse/eat3",
       "entity/horse/eat4",
-      "entity/horse/eat5"
+      "entity/horse/eat5",
+      "mob/horse/eat1",
+      "mob/horse/eat2",
+      "mob/horse/eat3",
+      "mob/horse/eat4",
+      "mob/horse/eat5"
     ],
     "subtitle": "subtitles.entity.mule.eat"
   },
@@ -5225,6 +5259,14 @@
       {
         "name": "entity/pufferfish/blow_out2",
         "volume": 0.7
+      },
+      {
+        "name": "mob/pufferfish/blow_out1",
+        "volume": 0.7
+      },
+      {
+        "name": "mob/pufferfish/blow_out2",
+        "volume": 0.7
       }
     ],
     "subtitle": "subtitles.entity.puffer_fish.blow_out"
@@ -5238,6 +5280,14 @@
       {
         "name": "entity/pufferfish/blow_up2",
         "volume": 0.45
+      },
+      {
+        "name": "mob/pufferfish/blow_up1",
+        "volume": 0.45
+      },
+      {
+        "name": "mob/pufferfish/blow_up2",
+        "volume": 0.45
       }
     ],
     "subtitle": "subtitles.entity.puffer_fish.blow_up"
@@ -5245,7 +5295,9 @@
   "entity.puffer_fish.death": {
     "sounds": [
       "entity/pufferfish/death1",
-      "entity/pufferfish/death2"
+      "entity/pufferfish/death2",
+      "mob/pufferfish/death1",
+      "mob/pufferfish/death2"
     ],
     "subtitle": "subtitles.entity.puffer_fish.death"
   },
@@ -5266,6 +5318,22 @@
       {
         "name": "entity/pufferfish/flop4",
         "volume": 0.3
+      },
+      {
+        "name": "mob/pufferfish/flop1",
+        "volume": 0.3
+      },
+      {
+        "name": "mob/pufferfish/flop2",
+        "volume": 0.3
+      },
+      {
+        "name": "mob/pufferfish/flop3",
+        "volume": 0.3
+      },
+      {
+        "name": "mob/pufferfish/flop4",
+        "volume": 0.3
       }
     ],
     "subtitle": "subtitles.entity.puffer_fish.flop"
@@ -5273,14 +5341,18 @@
   "entity.puffer_fish.hurt": {
     "sounds": [
       "entity/pufferfish/hurt1",
-      "entity/pufferfish/hurt2"
+      "entity/pufferfish/hurt2",
+      "mob/pufferfish/hurt1",
+      "mob/pufferfish/hurt2"
     ],
     "subtitle": "subtitles.entity.puffer_fish.hurt"
   },
   "entity.puffer_fish.sting": {
     "sounds": [
       "entity/pufferfish/sting1",
-      "entity/pufferfish/sting2"
+      "entity/pufferfish/sting2",
+      "mob/pufferfish/sting1",
+      "mob/pufferfish/sting2"
     ],
     "subtitle": "subtitles.entity.puffer_fish.sting"
   },
@@ -5310,7 +5382,11 @@
       "entity/rabbit/attack1",
       "entity/rabbit/attack2",
       "entity/rabbit/attack3",
-      "entity/rabbit/attack4"
+      "entity/rabbit/attack4",
+      "mob/rabbit/attack1",
+      "mob/rabbit/attack2",
+      "mob/rabbit/attack3",
+      "mob/rabbit/attack4"
     ],
     "subtitle": "subtitles.entity.rabbit.attack"
   },
@@ -6181,7 +6257,12 @@
       "entity/squid/ambient2",
       "entity/squid/ambient3",
       "entity/squid/ambient4",
-      "entity/squid/ambient5"
+      "entity/squid/ambient5",
+      "mob/squid/ambient1",
+      "mob/squid/ambient2",
+      "mob/squid/ambient3",
+      "mob/squid/ambient4",
+      "mob/squid/ambient5"
     ],
     "subtitle": "subtitles.entity.squid.ambient"
   },
@@ -6189,7 +6270,10 @@
     "sounds": [
       "entity/squid/death1",
       "entity/squid/death2",
-      "entity/squid/death3"
+      "entity/squid/death3",
+      "mob/squid/death1",
+      "mob/squid/death2",
+      "mob/squid/death3"
     ],
     "subtitle": "subtitles.entity.squid.death"
   },
@@ -6198,7 +6282,11 @@
       "entity/squid/hurt1",
       "entity/squid/hurt2",
       "entity/squid/hurt3",
-      "entity/squid/hurt4"
+      "entity/squid/hurt4",
+      "mob/squid/hurt1",
+      "mob/squid/hurt2",
+      "mob/squid/hurt3",
+      "mob/squid/hurt4"
     ],
     "subtitle": "subtitles.entity.squid.hurt"
   },
@@ -6206,7 +6294,10 @@
     "sounds": [
       "entity/squid/squirt1",
       "entity/squid/squirt2",
-      "entity/squid/squirt3"
+      "entity/squid/squirt3",
+      "mob/squid/squirt1",
+      "mob/squid/squirt2",
+      "mob/squid/squirt3"
     ],
     "subtitle": "subtitles.entity.squid.squirt"
   },
@@ -7351,13 +7442,17 @@
     "sounds": [
       "mob/wolf/bark1",
       "mob/wolf/bark2",
-      "mob/wolf/bark3"
+      "mob/wolf/bark3",
+      "mob/wolf/classic/bark1",
+      "mob/wolf/classic/bark2",
+      "mob/wolf/classic/bark3"
     ],
     "subtitle": "subtitles.entity.wolf.ambient"
   },
   "entity.wolf.death": {
     "sounds": [
-      "mob/wolf/death"
+      "mob/wolf/death",
+      "mob/wolf/classic/death"
     ],
     "subtitle": "subtitles.entity.wolf.death"
   },
@@ -7365,7 +7460,10 @@
     "sounds": [
       "mob/wolf/growl1",
       "mob/wolf/growl2",
-      "mob/wolf/growl3"
+      "mob/wolf/growl3",
+      "mob/wolf/classic/growl1",
+      "mob/wolf/classic/growl2",
+      "mob/wolf/classic/growl3"
     ],
     "subtitle": "subtitles.entity.wolf.growl"
   },
@@ -7379,13 +7477,17 @@
     "sounds": [
       "mob/wolf/hurt1",
       "mob/wolf/hurt2",
-      "mob/wolf/hurt3"
+      "mob/wolf/hurt3",
+      "mob/wolf/classic/hurt1",
+      "mob/wolf/classic/hurt2",
+      "mob/wolf/classic/hurt3"
     ],
     "subtitle": "subtitles.entity.wolf.hurt"
   },
   "entity.wolf.pant": {
     "sounds": [
-      "mob/wolf/panting"
+      "mob/wolf/panting",
+      "mob/wolf/classic/panting"
     ],
     "subtitle": "subtitles.entity.wolf.ambient"
   },
@@ -7407,7 +7509,8 @@
   },
   "entity.wolf.whine": {
     "sounds": [
-      "mob/wolf/whine"
+      "mob/wolf/whine",
+      "mob/wolf/classic/whine"
     ],
     "subtitle": "subtitles.entity.wolf.ambient"
   },
@@ -7702,5 +7805,374 @@
       "mob/zombified_piglin/zpighurt2"
     ],
     "subtitle": "subtitles.entity.zombified_piglin.hurt"
+  },
+  "entity.ghastling.ambient": {
+    "sounds": [
+      "mob/ghastling/ghastling1",
+      "mob/ghastling/ghastling2",
+      "mob/ghastling/ghastling3",
+      "mob/ghastling/ghastling4",
+      "mob/ghastling/ghastling5",
+      "mob/ghastling/ghastling6",
+      "mob/ghastling/ghastling7"
+    ],
+    "subtitle": "subtitles.entity.ghastling.ambient"
+  },
+  "entity.ghastling.death": {
+    "sounds": [
+      "mob/ghastling/death"
+    ],
+    "subtitle": "subtitles.entity.ghastling.death"
+  },
+  "entity.ghastling.hurt": {
+    "sounds": [
+      "mob/ghastling/hurt1",
+      "mob/ghastling/hurt2",
+      "mob/ghastling/hurt3",
+      "mob/ghastling/hurt4",
+      "mob/ghastling/hurt5"
+    ],
+    "subtitle": "subtitles.entity.ghastling.hurt"
+  },
+  "entity.ghastling.spawn": {
+    "sounds": [
+      "mob/ghastling/spawn"
+    ],
+    "subtitle": "subtitles.entity.ghastling.spawn"
+  },
+  "entity.happy_ghast.ambient": {
+    "sounds": [
+      "mob/happy_ghast/ambient1",
+      {
+        "name": "mob/happy_ghast/ambient2",
+        "weight": 3
+      },
+      {
+        "name": "mob/happy_ghast/ambient3",
+        "weight": 2
+      },
+      "mob/happy_ghast/ambient4",
+      {
+        "name": "mob/happy_ghast/ambient5",
+        "weight": 2
+      },
+      "mob/happy_ghast/ambient6",
+      {
+        "name": "mob/happy_ghast/ambient7",
+        "weight": 2
+      },
+      "mob/happy_ghast/ambient8",
+      "mob/happy_ghast/ambient9",
+      "mob/happy_ghast/ambient10",
+      "mob/happy_ghast/ambient11",
+      {
+        "name": "mob/happy_ghast/ambient12",
+        "weight": 2
+      },
+      {
+        "name": "mob/happy_ghast/ambient13",
+        "weight": 2
+      },
+      "mob/happy_ghast/ambient14"
+    ],
+    "subtitle": "subtitles.entity.happy_ghast.ambient"
+  },
+  "entity.happy_ghast.death": {
+    "sounds": [
+      "mob/happy_ghast/death"
+    ],
+    "subtitle": "subtitles.entity.happy_ghast.death"
+  },
+  "entity.happy_ghast.equip": {
+    "sounds": [
+      "mob/happy_ghast/harness_equip"
+    ],
+    "subtitle": "subtitles.entity.happy_ghast.equip"
+  },
+  "entity.happy_ghast.harness_goggles_down": {
+    "sounds": [
+      "mob/happy_ghast/goggles_down"
+    ],
+    "subtitle": "subtitles.entity.happy_ghast.harness_goggles_down"
+  },
+  "entity.happy_ghast.harness_goggles_up": {
+    "sounds": [
+      "mob/happy_ghast/goggles_up"
+    ],
+    "subtitle": "subtitles.entity.happy_ghast.harness_goggles_up"
+  },
+  "entity.happy_ghast.hurt": {
+    "sounds": [
+      "mob/happy_ghast/hurt1",
+      "mob/happy_ghast/hurt2",
+      "mob/happy_ghast/hurt3",
+      "mob/happy_ghast/hurt4",
+      "mob/happy_ghast/hurt5",
+      "mob/happy_ghast/hurt6"
+    ],
+    "subtitle": "subtitles.entity.happy_ghast.hurt"
+  },
+  "entity.happy_ghast.riding": {
+    "sounds": [
+      "mob/happy_ghast/ghast_ride"
+    ]
+  },
+  "entity.happy_ghast.unequip": {
+    "sounds": [
+      "mob/happy_ghast/harness_unequip"
+    ],
+    "subtitle": "subtitles.entity.happy_ghast.unequip"
+  },
+  "entity.wolf_angry.ambient": {
+    "sounds": [
+      "mob/wolf/angry/bark1",
+      "mob/wolf/angry/bark2",
+      "mob/wolf/angry/bark3"
+    ],
+    "subtitle": "subtitles.entity.wolf.bark"
+  },
+  "entity.wolf_angry.death": {
+    "sounds": [
+      "mob/wolf/angry/death"
+    ],
+    "subtitle": "subtitles.entity.wolf.death"
+  },
+  "entity.wolf_angry.growl": {
+    "sounds": [
+      "mob/wolf/angry/growl1",
+      "mob/wolf/angry/growl2",
+      "mob/wolf/angry/growl3"
+    ],
+    "subtitle": "subtitles.entity.wolf.growl"
+  },
+  "entity.wolf_angry.hurt": {
+    "sounds": [
+      "mob/wolf/angry/hurt1",
+      "mob/wolf/angry/hurt2",
+      "mob/wolf/angry/hurt3"
+    ],
+    "subtitle": "subtitles.entity.wolf.hurt"
+  },
+  "entity.wolf_angry.pant": {
+    "sounds": [
+      "mob/wolf/angry/panting"
+    ],
+    "subtitle": "subtitles.entity.wolf.pant"
+  },
+  "entity.wolf_angry.whine": {
+    "sounds": [
+      "mob/wolf/angry/whine"
+    ],
+    "subtitle": "subtitles.entity.wolf.whine"
+  },
+  "entity.wolf_big.ambient": {
+    "sounds": [
+      "mob/wolf/big/bark1",
+      "mob/wolf/big/bark2",
+      "mob/wolf/big/bark3"
+    ],
+    "subtitle": "subtitles.entity.wolf.bark"
+  },
+  "entity.wolf_big.death": {
+    "sounds": [
+      "mob/wolf/big/death"
+    ],
+    "subtitle": "subtitles.entity.wolf.death"
+  },
+  "entity.wolf_big.growl": {
+    "sounds": [
+      "mob/wolf/big/growl1",
+      "mob/wolf/big/growl2",
+      "mob/wolf/big/growl3"
+    ],
+    "subtitle": "subtitles.entity.wolf.growl"
+  },
+  "entity.wolf_big.hurt": {
+    "sounds": [
+      "mob/wolf/big/hurt1",
+      "mob/wolf/big/hurt2",
+      "mob/wolf/big/hurt3"
+    ],
+    "subtitle": "subtitles.entity.wolf.hurt"
+  },
+  "entity.wolf_big.pant": {
+    "sounds": [
+      "mob/wolf/big/panting"
+    ],
+    "subtitle": "subtitles.entity.wolf.pant"
+  },
+  "entity.wolf_big.whine": {
+    "sounds": [
+      "mob/wolf/big/whine"
+    ],
+    "subtitle": "subtitles.entity.wolf.whine"
+  },
+  "entity.wolf_cute.ambient": {
+    "sounds": [
+      "mob/wolf/cute/bark1",
+      "mob/wolf/cute/bark2",
+      "mob/wolf/cute/bark3"
+    ],
+    "subtitle": "subtitles.entity.wolf.bark"
+  },
+  "entity.wolf_cute.death": {
+    "sounds": [
+      "mob/wolf/cute/death"
+    ],
+    "subtitle": "subtitles.entity.wolf.death"
+  },
+  "entity.wolf_cute.growl": {
+    "sounds": [
+      "mob/wolf/cute/growl1",
+      "mob/wolf/cute/growl2",
+      "mob/wolf/cute/growl3"
+    ],
+    "subtitle": "subtitles.entity.wolf.growl"
+  },
+  "entity.wolf_cute.hurt": {
+    "sounds": [
+      "mob/wolf/cute/hurt1",
+      "mob/wolf/cute/hurt2",
+      "mob/wolf/cute/hurt3"
+    ],
+    "subtitle": "subtitles.entity.wolf.hurt"
+  },
+  "entity.wolf_cute.pant": {
+    "sounds": [
+      "mob/wolf/cute/panting"
+    ],
+    "subtitle": "subtitles.entity.wolf.pant"
+  },
+  "entity.wolf_cute.whine": {
+    "sounds": [
+      "mob/wolf/cute/whine"
+    ],
+    "subtitle": "subtitles.entity.wolf.whine"
+  },
+  "entity.wolf_grumpy.ambient": {
+    "sounds": [
+      "mob/wolf/grumpy/bark1",
+      "mob/wolf/grumpy/bark2",
+      "mob/wolf/grumpy/bark3"
+    ],
+    "subtitle": "subtitles.entity.wolf.bark"
+  },
+  "entity.wolf_grumpy.death": {
+    "sounds": [
+      "mob/wolf/grumpy/death"
+    ],
+    "subtitle": "subtitles.entity.wolf.death"
+  },
+  "entity.wolf_grumpy.growl": {
+    "sounds": [
+      "mob/wolf/grumpy/growl1",
+      "mob/wolf/grumpy/growl2",
+      "mob/wolf/grumpy/growl3"
+    ],
+    "subtitle": "subtitles.entity.wolf.growl"
+  },
+  "entity.wolf_grumpy.hurt": {
+    "sounds": [
+      "mob/wolf/grumpy/hurt1",
+      "mob/wolf/grumpy/hurt2",
+      "mob/wolf/grumpy/hurt3"
+    ],
+    "subtitle": "subtitles.entity.wolf.hurt"
+  },
+  "entity.wolf_grumpy.pant": {
+    "sounds": [
+      "mob/wolf/grumpy/panting"
+    ],
+    "subtitle": "subtitles.entity.wolf.pant"
+  },
+  "entity.wolf_grumpy.whine": {
+    "sounds": [
+      "mob/wolf/grumpy/whine"
+    ],
+    "subtitle": "subtitles.entity.wolf.whine"
+  },
+  "entity.wolf_puglin.ambient": {
+    "sounds": [
+      "mob/wolf/puglin/bark1",
+      "mob/wolf/puglin/bark2",
+      "mob/wolf/puglin/bark3"
+    ],
+    "subtitle": "subtitles.entity.wolf.bark"
+  },
+  "entity.wolf_puglin.death": {
+    "sounds": [
+      "mob/wolf/puglin/death"
+    ],
+    "subtitle": "subtitles.entity.wolf.death"
+  },
+  "entity.wolf_puglin.growl": {
+    "sounds": [
+      "mob/wolf/puglin/growl1",
+      "mob/wolf/puglin/growl2",
+      "mob/wolf/puglin/growl3"
+    ],
+    "subtitle": "subtitles.entity.wolf.growl"
+  },
+  "entity.wolf_puglin.hurt": {
+    "sounds": [
+      "mob/wolf/puglin/hurt1",
+      "mob/wolf/puglin/hurt2",
+      "mob/wolf/puglin/hurt3"
+    ],
+    "subtitle": "subtitles.entity.wolf.hurt"
+  },
+  "entity.wolf_puglin.pant": {
+    "sounds": [
+      "mob/wolf/puglin/panting"
+    ],
+    "subtitle": "subtitles.entity.wolf.pant"
+  },
+  "entity.wolf_puglin.whine": {
+    "sounds": [
+      "mob/wolf/puglin/whine"
+    ],
+    "subtitle": "subtitles.entity.wolf.whine"
+  },
+  "entity.wolf_sad.ambient": {
+    "sounds": [
+      "mob/wolf/sad/bark1",
+      "mob/wolf/sad/bark2",
+      "mob/wolf/sad/bark3"
+    ],
+    "subtitle": "subtitles.entity.wolf.bark"
+  },
+  "entity.wolf_sad.death": {
+    "sounds": [
+      "mob/wolf/sad/death"
+    ],
+    "subtitle": "subtitles.entity.wolf.death"
+  },
+  "entity.wolf_sad.growl": {
+    "sounds": [
+      "mob/wolf/sad/growl1",
+      "mob/wolf/sad/growl2",
+      "mob/wolf/sad/growl3"
+    ],
+    "subtitle": "subtitles.entity.wolf.growl"
+  },
+  "entity.wolf_sad.hurt": {
+    "sounds": [
+      "mob/wolf/sad/hurt1",
+      "mob/wolf/sad/hurt2",
+      "mob/wolf/sad/hurt3"
+    ],
+    "subtitle": "subtitles.entity.wolf.hurt"
+  },
+  "entity.wolf_sad.pant": {
+    "sounds": [
+      "mob/wolf/sad/panting"
+    ],
+    "subtitle": "subtitles.entity.wolf.pant"
+  },
+  "entity.wolf_sad.whine": {
+    "sounds": [
+      "mob/wolf/sad/whine"
+    ],
+    "subtitle": "subtitles.entity.wolf.whine"
   }
 }
