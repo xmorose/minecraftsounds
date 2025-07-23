@@ -61,11 +61,13 @@
     />
   </div>
   <Credit @show-notification="showNotification"/>
+  <KofiWidget />
   <footer class="absolute bottom-0 left-0 right-0 text-center py-2 text-white text-opacity-50 text-xs pointer-events-none">
     <p>We are not affiliated with Mojang AB or Microsoft.</p>
     <p>For support or inquiries, please contact us at hello@minecraftsounds.com.</p>
   </footer>
 </template>
+
 <script>
 import FilterSidebar from '../components/FilterSidebar.vue';
 import SoundGrid from '../components/SoundGrid.vue';
@@ -73,7 +75,9 @@ import SoundSelection from '../components/SoundSelection.vue';
 import Notification from '../components/Notification.vue';
 import TagSelection from "@/components/TagSelection.vue";
 import Credit from "@/components/Credit.vue";
+import KofiWidget from '@/components/KofiWidget.vue';
 import { debounce } from 'lodash';
+
 export default {
   components: {
     FilterSidebar,
@@ -82,6 +86,7 @@ export default {
     TagSelection,
     Notification,
     Credit,
+    KofiWidget,
   },
   data() {
     const hashContent = window.location.hash.slice(1);
