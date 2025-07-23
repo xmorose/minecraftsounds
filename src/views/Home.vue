@@ -59,9 +59,13 @@
         :message="notificationMessage"
         @close="closeNotification"
     />
+
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end space-y-4">
+      <KofiWidget />
+      <StopButton :is-playing="isAudioPlaying" @stop-all="stopAllSounds" />
+    </div>
   </div>
   <Credit @show-notification="showNotification"/>
-  <KofiWidget />
   <footer class="absolute bottom-0 left-0 right-0 text-center py-2 text-white text-opacity-50 text-xs pointer-events-none">
     <p>We are not affiliated with Mojang AB or Microsoft.</p>
     <p>For support or inquiries, please contact us at hello@minecraftsounds.com.</p>
@@ -76,6 +80,7 @@ import Notification from '../components/Notification.vue';
 import TagSelection from "@/components/TagSelection.vue";
 import Credit from "@/components/Credit.vue";
 import KofiWidget from '@/components/KofiWidget.vue';
+import StopButton from '@/components/StopButton.vue';
 import { debounce } from 'lodash';
 
 export default {
@@ -87,6 +92,7 @@ export default {
     Notification,
     Credit,
     KofiWidget,
+    StopButton,
   },
   data() {
     const hashContent = window.location.hash.slice(1);
@@ -116,6 +122,9 @@ export default {
     };
   },
   computed: {
+    isAudioPlaying() {
+      return this.activeSoundSources.length > 0;
+    },
     availableFolders() {
       return [
         'ambient',
@@ -189,6 +198,11 @@ export default {
     }, 250);
   },
   methods: {
+    handleKeydown(event) {
+      if (event.key === 'Escape') {
+        this.stopAllSounds();
+      }
+    },
     async loadFromUrl() {
       const hashContent = window.location.hash.slice(1);
       const [category, queryString] = hashContent.split('?');
@@ -375,8 +389,6 @@ export default {
     },
     async playSound(soundItem) {
       try {
-        this.stopAllSounds();
-
         if (!this.audioContext) {
           this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
         }
@@ -479,11 +491,13 @@ export default {
   },
   mounted() {
     this.loadFromUrl();
+    window.addEventListener('keydown', this.handleKeydown);
   },
   beforeDestroy() {
     if (this.updateUrlDebounced) {
       this.updateUrlDebounced.cancel();
     }
+    window.removeEventListener('keydown', this.handleKeydown);
   },
   watch: {
     selectedFolder() {
@@ -507,7 +521,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 footer {
   background: linear-gradient(to top, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0));
