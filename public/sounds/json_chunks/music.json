@@ -80,6 +80,26 @@
       }
     ]
   },
+  "music.game.below_and_above": {
+    "sounds": [
+      {
+        "name": "music/game/below_and_above",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      }
+    ]
+  },
+  "music.game.broken_clocks": {
+    "sounds": [
+      {
+        "name": "music/game/broken_clocks",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      }
+    ]
+  },
   "music.game.clark": {
     "sounds": [
       {
@@ -119,6 +139,15 @@
     "sounds": [
       {
         "name": "music/game/featherfall",
+        "stream": true,
+        "volume": 0.4
+      }
+    ]
+  },
+  "music.game.fireflies": {
+    "sounds": [
+      {
+        "name": "music/game/fireflies",
         "stream": true,
         "volume": 0.4,
         "weight": 2
@@ -169,6 +198,16 @@
       }
     ]
   },
+  "music.game.lilypad": {
+    "sounds": [
+      {
+        "name": "music/game/lilypad",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      }
+    ]
+  },
   "music.game.living_mice": {
     "sounds": [
       {
@@ -200,6 +239,16 @@
         "name": "music/game/one_more_day",
         "stream": true,
         "volume": 0.4
+      }
+    ]
+  },
+  "music.game.os_piano": {
+    "sounds": [
+      {
+        "name": "music/game/os_piano",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
       }
     ]
   },
@@ -258,42 +307,6 @@
     "sounds": [
       {
         "name": "music/game/yakusoku",
-        "stream": true,
-        "volume": 0.8
-      }
-    ]
-  },
-  "music.game.deeper": {
-    "sounds": [
-      {
-        "name": "music/game/deeper",
-        "stream": true,
-        "volume": 0.4
-      }
-    ]
-  },
-  "music.game.eld_unknown": {
-    "sounds": [
-      {
-        "name": "music/game/eld_unknown",
-        "volume": 0.4,
-        "weight": 2
-      }
-    ]
-  },
-  "music.game.endless": {
-    "sounds": [
-      {
-        "name": "music/game/endless",
-        "stream": true,
-        "volume": 0.4
-      }
-    ]
-  },
-  "music.game.pokopoko": {
-    "sounds": [
-      {
-        "name": "music/game/pokopoko",
         "stream": true,
         "volume": 0.8
       }
@@ -398,8 +411,7 @@
       {
         "name": "music/game/crescent_dunes",
         "stream": true,
-        "volume": 0.4,
-        "weight": 3
+        "volume": 0.4
       }
     ]
   },
@@ -408,8 +420,7 @@
       {
         "name": "music/game/echo_in_the_wind",
         "stream": true,
-        "volume": 0.4,
-        "weight": 2
+        "volume": 0.4
       }
     ]
   },
@@ -431,10 +442,37 @@
       }
     ]
   },
+  "music.game.deeper": {
+    "sounds": [
+      {
+        "name": "music/game/deeper",
+        "stream": true,
+        "volume": 0.4
+      }
+    ]
+  },
   "music.game.an_ordinary_day": {
     "sounds": [
       {
         "name": "music/game/an_ordinary_day",
+        "stream": true,
+        "volume": 0.4
+      }
+    ]
+  },
+  "music.game.eld_unknown": {
+    "sounds": [
+      {
+        "name": "music/game/eld_unknown",
+        "volume": 0.4,
+        "weight": 2
+      }
+    ]
+  },
+  "music.game.endless": {
+    "sounds": [
+      {
+        "name": "music/game/endless",
         "stream": true,
         "volume": 0.4
       }
@@ -446,6 +484,15 @@
         "name": "music/game/infinite_amethyst",
         "stream": true,
         "volume": 0.4
+      }
+    ]
+  },
+  "music.game.pokopoko": {
+    "sounds": [
+      {
+        "name": "music/game/pokopoko",
+        "stream": true,
+        "volume": 0.8
       }
     ]
   },

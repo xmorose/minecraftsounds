@@ -71,6 +71,14 @@
       }
     ]
   },
+  "records.lava_chicken": {
+    "sounds": [
+      {
+        "name": "records/lava_chicken",
+        "stream": true
+      }
+    ]
+  },
   "records.mall": {
     "sounds": [
       {
@@ -131,6 +139,14 @@
     "sounds": [
       {
         "name": "records/strad",
+        "stream": true
+      }
+    ]
+  },
+  "records.tears": {
+    "sounds": [
+      {
+        "name": "records/tears",
         "stream": true
       }
     ]

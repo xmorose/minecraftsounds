@@ -263,41 +263,6 @@
       }
     ]
   },
-  "entity.horse.eat1": {
-    "sounds": [
-      {
-        "name": "entity/horse/eat1"
-      }
-    ]
-  },
-  "entity.horse.eat2": {
-    "sounds": [
-      {
-        "name": "entity/horse/eat2"
-      }
-    ]
-  },
-  "entity.horse.eat3": {
-    "sounds": [
-      {
-        "name": "entity/horse/eat3"
-      }
-    ]
-  },
-  "entity.horse.eat4": {
-    "sounds": [
-      {
-        "name": "entity/horse/eat4"
-      }
-    ]
-  },
-  "entity.horse.eat5": {
-    "sounds": [
-      {
-        "name": "entity/horse/eat5"
-      }
-    ]
-  },
   "entity.endereye.dead1": {
     "sounds": [
       {
@@ -509,185 +474,6 @@
     "sounds": [
       {
         "name": "entity/itemframe/rotate_item4"
-      }
-    ]
-  },
-  "entity.glow_squid.ambient1": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/ambient1"
-      }
-    ]
-  },
-  "entity.glow_squid.ambient2": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/ambient2"
-      }
-    ]
-  },
-  "entity.glow_squid.ambient3": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/ambient3"
-      }
-    ]
-  },
-  "entity.glow_squid.ambient4": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/ambient4"
-      }
-    ]
-  },
-  "entity.glow_squid.ambient5": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/ambient5"
-      }
-    ]
-  },
-  "entity.glow_squid.death1": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/death1"
-      }
-    ]
-  },
-  "entity.glow_squid.death2": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/death2"
-      }
-    ]
-  },
-  "entity.glow_squid.death3": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/death3"
-      }
-    ]
-  },
-  "entity.glow_squid.hurt1": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/hurt1"
-      }
-    ]
-  },
-  "entity.glow_squid.hurt2": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/hurt2"
-      }
-    ]
-  },
-  "entity.glow_squid.hurt3": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/hurt3"
-      }
-    ]
-  },
-  "entity.glow_squid.hurt4": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/hurt4"
-      }
-    ]
-  },
-  "entity.glow_squid.squirt1": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/squirt1"
-      }
-    ]
-  },
-  "entity.glow_squid.squirt2": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/squirt2"
-      }
-    ]
-  },
-  "entity.glow_squid.squirt3": {
-    "sounds": [
-      {
-        "name": "entity/glow_squid/squirt3"
-      }
-    ]
-  },
-  "entity.guardian.ambient1": {
-    "sounds": [
-      {
-        "name": "entity/guardian/ambient1",
-        "volume": 0.1
-      }
-    ]
-  },
-  "entity.guardian.ambient2": {
-    "sounds": [
-      {
-        "name": "entity/guardian/ambient2",
-        "volume": 0.1
-      }
-    ]
-  },
-  "entity.guardian.ambient3": {
-    "sounds": [
-      {
-        "name": "entity/guardian/ambient3",
-        "volume": 0.1
-      }
-    ]
-  },
-  "entity.guardian.ambient4": {
-    "sounds": [
-      {
-        "name": "entity/guardian/ambient4",
-        "volume": 0.1
-      }
-    ]
-  },
-  "entity.leashknot.break1": {
-    "sounds": [
-      {
-        "name": "entity/leashknot/break1"
-      }
-    ]
-  },
-  "entity.leashknot.break2": {
-    "sounds": [
-      {
-        "name": "entity/leashknot/break2"
-      }
-    ]
-  },
-  "entity.leashknot.break3": {
-    "sounds": [
-      {
-        "name": "entity/leashknot/break3"
-      }
-    ]
-  },
-  "entity.leashknot.place1": {
-    "sounds": [
-      {
-        "name": "entity/leashknot/place1"
-      }
-    ]
-  },
-  "entity.leashknot.place2": {
-    "sounds": [
-      {
-        "name": "entity/leashknot/place2"
-      }
-    ]
-  },
-  "entity.leashknot.place3": {
-    "sounds": [
-      {
-        "name": "entity/leashknot/place3"
       }
     ]
   },
@@ -1030,140 +816,6 @@
       }
     ]
   },
-  "entity.pufferfish.blow_out1": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/blow_out1",
-        "volume": 0.7
-      }
-    ]
-  },
-  "entity.pufferfish.blow_out2": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/blow_out2",
-        "volume": 0.7
-      }
-    ]
-  },
-  "entity.pufferfish.blow_up1": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/blow_up1",
-        "volume": 0.45
-      }
-    ]
-  },
-  "entity.pufferfish.blow_up2": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/blow_up2",
-        "volume": 0.45
-      }
-    ]
-  },
-  "entity.pufferfish.death1": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/death1"
-      }
-    ]
-  },
-  "entity.pufferfish.death2": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/death2"
-      }
-    ]
-  },
-  "entity.pufferfish.flop1": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/flop1",
-        "volume": 0.3
-      }
-    ]
-  },
-  "entity.pufferfish.flop2": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/flop2",
-        "volume": 0.3
-      }
-    ]
-  },
-  "entity.pufferfish.flop3": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/flop3",
-        "volume": 0.3
-      }
-    ]
-  },
-  "entity.pufferfish.flop4": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/flop4",
-        "volume": 0.3
-      }
-    ]
-  },
-  "entity.pufferfish.hurt1": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/hurt1"
-      }
-    ]
-  },
-  "entity.pufferfish.hurt2": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/hurt2"
-      }
-    ]
-  },
-  "entity.pufferfish.sting1": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/sting1"
-      }
-    ]
-  },
-  "entity.pufferfish.sting2": {
-    "sounds": [
-      {
-        "name": "entity/pufferfish/sting2"
-      }
-    ]
-  },
-  "entity.rabbit.attack1": {
-    "sounds": [
-      {
-        "name": "entity/rabbit/attack1"
-      }
-    ]
-  },
-  "entity.rabbit.attack2": {
-    "sounds": [
-      {
-        "name": "entity/rabbit/attack2"
-      }
-    ]
-  },
-  "entity.rabbit.attack3": {
-    "sounds": [
-      {
-        "name": "entity/rabbit/attack3"
-      }
-    ]
-  },
-  "entity.rabbit.attack4": {
-    "sounds": [
-      {
-        "name": "entity/rabbit/attack4"
-      }
-    ]
-  },
   "entity.shulker.ambient1": {
     "sounds": [
       {
@@ -1472,111 +1124,6 @@
       }
     ]
   },
-  "entity.squid.ambient1": {
-    "sounds": [
-      {
-        "name": "entity/squid/ambient1"
-      }
-    ]
-  },
-  "entity.squid.ambient2": {
-    "sounds": [
-      {
-        "name": "entity/squid/ambient2"
-      }
-    ]
-  },
-  "entity.squid.ambient3": {
-    "sounds": [
-      {
-        "name": "entity/squid/ambient3"
-      }
-    ]
-  },
-  "entity.squid.ambient4": {
-    "sounds": [
-      {
-        "name": "entity/squid/ambient4"
-      }
-    ]
-  },
-  "entity.squid.ambient5": {
-    "sounds": [
-      {
-        "name": "entity/squid/ambient5"
-      }
-    ]
-  },
-  "entity.squid.death1": {
-    "sounds": [
-      {
-        "name": "entity/squid/death1"
-      }
-    ]
-  },
-  "entity.squid.death2": {
-    "sounds": [
-      {
-        "name": "entity/squid/death2"
-      }
-    ]
-  },
-  "entity.squid.death3": {
-    "sounds": [
-      {
-        "name": "entity/squid/death3"
-      }
-    ]
-  },
-  "entity.squid.hurt1": {
-    "sounds": [
-      {
-        "name": "entity/squid/hurt1"
-      }
-    ]
-  },
-  "entity.squid.hurt2": {
-    "sounds": [
-      {
-        "name": "entity/squid/hurt2"
-      }
-    ]
-  },
-  "entity.squid.hurt3": {
-    "sounds": [
-      {
-        "name": "entity/squid/hurt3"
-      }
-    ]
-  },
-  "entity.squid.hurt4": {
-    "sounds": [
-      {
-        "name": "entity/squid/hurt4"
-      }
-    ]
-  },
-  "entity.squid.squirt1": {
-    "sounds": [
-      {
-        "name": "entity/squid/squirt1"
-      }
-    ]
-  },
-  "entity.squid.squirt2": {
-    "sounds": [
-      {
-        "name": "entity/squid/squirt2"
-      }
-    ]
-  },
-  "entity.squid.squirt3": {
-    "sounds": [
-      {
-        "name": "entity/squid/squirt3"
-      }
-    ]
-  },
   "entity.wind_charge.wind_burst1": {
     "sounds": [
       {
@@ -1735,6 +1282,55 @@
     "sounds": [
       {
         "name": "entity/witch/throw3"
+      }
+    ]
+  },
+  "entity.leashknot.break": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/break"
+      }
+    ]
+  },
+  "entity.leashknot.leash1": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/leash1"
+      }
+    ]
+  },
+  "entity.leashknot.leash2": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/leash2"
+      }
+    ]
+  },
+  "entity.leashknot.leash3": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/leash3"
+      }
+    ]
+  },
+  "entity.leashknot.unleash1": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/unleash1"
+      }
+    ]
+  },
+  "entity.leashknot.unleash2": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/unleash2"
+      }
+    ]
+  },
+  "entity.leashknot.unleash3": {
+    "sounds": [
+      {
+        "name": "entity/leashknot/unleash3"
       }
     ]
   }
