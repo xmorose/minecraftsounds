@@ -23,7 +23,7 @@ An interactive web application for browsing, playing, and managing Minecraft sou
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/xmorose/wr-utils.git
+git clone https://github.com/xmorose/minecraftsounds.git
 cd minecraft-sound-browser
 ```
 
