@@ -388,6 +388,7 @@ export default {
       this.updateUrlWithSounds();
     },
     async playSound(soundItem) {
+      this.stopAllSounds();
       try {
         if (!this.audioContext) {
           this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
