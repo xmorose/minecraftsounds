@@ -19,9 +19,15 @@
 </template>
 
 <script>
+import { useGlobalVolume } from '@/composables/useGlobalVolume';
+
 export default {
   props: {
     sound: Object,
+  },
+  setup() {
+    const { getEffectiveVolume } = useGlobalVolume();
+    return { getEffectiveVolume };
   },
   computed: {
     formattedSoundName() {
@@ -43,6 +49,7 @@ export default {
 
       const audioPath = `/sounds/${this.sound.soundFileName}.ogg`;
       currentAudio = new Audio(audioPath);
+      currentAudio.volume = this.getEffectiveVolume(1.0);
 
       currentAudio.play().catch(error => {
         console.error(`Error playing sound: ${audioPath}`, error);

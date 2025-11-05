@@ -26,18 +26,75 @@
           Group: {{ sound.groupedSounds.length }} sounds
         </div>
         <div @click.stop class="mb-1">
-          <label class="block text-gray-400 text-xs">Pitch: {{ sound.pitch.toFixed(2) }}</label>
-          <input
-              type="range"
-              min="0.5"
-              max="2"
-              step="0.01"
-              :value="sound.pitch"
-              @input="updatePitch(sound, $event.target.value)"
-              class="w-full h-1"
-          />
+          <div class="flex justify-between items-center">
+            <label class="block text-gray-400 text-xs">
+              {{ sound.layers && sound.layers.length > 1 ? 'Pitch Layers' : 'Pitch' }}
+            </label>
+            <div class="flex gap-1">
+              <button
+                v-if="sound.layers && sound.layers.length > 0"
+                @click.stop="togglePerLayerVolume(sound)"
+                class="text-purple-400 hover:text-purple-600 text-xs focus:outline-none"
+                :title="sound.usePerLayerVolume ? 'Switch to global volume' : 'Switch to per-layer volume'">
+                <i :class="sound.usePerLayerVolume ? 'fas fa-layer-group' : 'fas fa-volume-up'"></i>
+              </button>
+              <button
+                @click.stop="addLayer(sound)"
+                class="text-blue-400 hover:text-blue-600 text-xs focus:outline-none"
+                title="Add pitch layer">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div v-if="sound.layers && sound.layers.length > 0">
+            <div v-for="(layer, layerIndex) in sound.layers" :key="layerIndex" class="mb-2">
+              <div class="flex items-center gap-1 mb-1">
+                <input
+                    type="range"
+                    min="0.5"
+                    max="2"
+                    step="0.01"
+                    :value="layer.pitch"
+                    @input="updateLayerPitch(sound, layerIndex, $event.target.value)"
+                    class="flex-grow h-1"
+                />
+                <span class="text-gray-400 text-xs w-10">{{ layer.pitch.toFixed(2) }}</span>
+                <button
+                  v-if="sound.layers.length > 1"
+                  @click.stop="removeLayer(sound, layerIndex)"
+                  class="text-red-400 hover:text-red-600 text-xs focus:outline-none"
+                  title="Remove layer">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+              <div v-if="sound.usePerLayerVolume" class="flex items-center gap-1">
+                <input
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    :value="layer.volume || 1.0"
+                    @input="updateLayerVolume(sound, layerIndex, $event.target.value)"
+                    class="flex-grow h-1"
+                />
+                <span class="text-gray-400 text-xs w-10">{{ (layer.volume || 1.0).toFixed(1) }}</span>
+                <div class="w-4"></div>
+              </div>
+            </div>
+          </div>
+          <div v-else>
+            <input
+                type="range"
+                min="0.5"
+                max="2"
+                step="0.01"
+                :value="sound.pitch"
+                @input="updatePitch(sound, $event.target.value)"
+                class="w-full h-1"
+            />
+          </div>
         </div>
-        <div @click.stop>
+        <div @click.stop v-if="!sound.usePerLayerVolume">
           <label class="block text-gray-400 text-xs">Volume: {{ sound.volume.toFixed(1) }}</label>
           <input
               type="range"
@@ -116,6 +173,21 @@ export default {
     updateVolume(sound, value) {
       this.$emit('update-volume', sound, Number(value));
     },
+    addLayer(sound) {
+      this.$emit('add-layer', sound);
+    },
+    removeLayer(sound, layerIndex) {
+      this.$emit('remove-layer', sound, layerIndex);
+    },
+    updateLayerPitch(sound, layerIndex, value) {
+      this.$emit('update-layer-pitch', sound, layerIndex, Number(value));
+    },
+    updateLayerVolume(sound, layerIndex, value) {
+      this.$emit('update-layer-volume', sound, layerIndex, Number(value));
+    },
+    togglePerLayerVolume(sound) {
+      this.$emit('toggle-per-layer-volume', sound);
+    },
     playSingleSound(sound) {
       this.$emit('play-single-sound', sound);
     },
@@ -124,7 +196,19 @@ export default {
     },
     copyMMCommand() {
       const mmCommand = this.selectedSounds
-          .map(sound => `- sound{s=${sound.displayName};p=${sound.pitch.toFixed(2)};v=${sound.volume.toFixed(1)}}`)
+          .flatMap(sound => {
+            if (sound.layers && sound.layers.length > 0) {
+              return sound.layers.map(layer => {
+                let effectiveVolume = sound.volume;
+                if (sound.usePerLayerVolume) {
+                  const layerVolume = layer.volume !== undefined ? layer.volume : 1.0;
+                  effectiveVolume = sound.volume * layerVolume;
+                }
+                return `- sound{s=${sound.displayName};p=${layer.pitch.toFixed(2)};v=${effectiveVolume.toFixed(1)}}`;
+              });
+            }
+            return `- sound{s=${sound.displayName};p=${sound.pitch.toFixed(2)};v=${sound.volume.toFixed(1)}}`;
+          })
           .join('\n');
       this.copyToClipboard(mmCommand, 'MM Command');
     },
@@ -133,21 +217,46 @@ export default {
       this.copyToClipboard(ids, 'Sound IDs');
     },
     copyEvent() {
-      const soundsJson = this.selectedSounds.map(sound => {
-        if (sound.isGrouped) {
-          return {
-            type: "event",
-            name: `minecraft:${sound.displayName}`,
-            pitch: parseFloat(sound.pitch.toFixed(2)),
-            volume: parseFloat(sound.volume.toFixed(1))
-          };
+      const soundsJson = this.selectedSounds.flatMap(sound => {
+        if (sound.layers && sound.layers.length > 0) {
+          return sound.layers.map(layer => {
+            let effectiveVolume = sound.volume;
+            if (sound.usePerLayerVolume) {
+              const layerVolume = layer.volume !== undefined ? layer.volume : 1.0;
+              effectiveVolume = sound.volume * layerVolume;
+            }
+            if (sound.isGrouped) {
+              return {
+                type: "event",
+                name: `minecraft:${sound.displayName}`,
+                pitch: parseFloat(layer.pitch.toFixed(2)),
+                volume: parseFloat(effectiveVolume.toFixed(1))
+              };
+            } else {
+              return {
+                type: "file",
+                name: sound.soundFileName,
+                pitch: parseFloat(layer.pitch.toFixed(2)),
+                volume: parseFloat(effectiveVolume.toFixed(1))
+              };
+            }
+          });
         } else {
-          return {
-            type: "file",
-            name: sound.soundFileName,
-            pitch: parseFloat(sound.pitch.toFixed(2)),
-            volume: parseFloat(sound.volume.toFixed(1))
-          };
+          if (sound.isGrouped) {
+            return {
+              type: "event",
+              name: `minecraft:${sound.displayName}`,
+              pitch: parseFloat(sound.pitch.toFixed(2)),
+              volume: parseFloat(sound.volume.toFixed(1))
+            };
+          } else {
+            return {
+              type: "file",
+              name: sound.soundFileName,
+              pitch: parseFloat(sound.pitch.toFixed(2)),
+              volume: parseFloat(sound.volume.toFixed(1))
+            };
+          }
         }
       });
 

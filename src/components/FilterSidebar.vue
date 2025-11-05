@@ -1,71 +1,89 @@
 <template>
-  <div class="filter-sidebar p-4 bg-gray-900 text-white h-full relative">
-    <h2 class="font-bold mb-2 text-lg">Filter by Sound Category</h2>
-    <select
-        @change="updateFolder($event)"
-        class="border border-gray-700 p-2 w-full bg-gray-800 text-white rounded-md"
-        :value="selectedFolder"
-    >
-      <option value="">All Categories</option>
-      <option v-for="folder in folders" :key="folder" :value="folder">
-        {{ folder }}
-      </option>
-    </select>
-
-    <h2 class="font-bold mt-4 mb-2 text-lg">Search Sounds</h2>
-    <div class="relative">
-      <input
-          type="text"
-          v-model="localSearchQuery"
-          @input="updateSearch"
-          @keydown.down="onArrowDown"
-          @keydown.up="onArrowUp"
-          @keydown.enter="onEnter"
-          placeholder="Search sounds..."
-          class="border border-gray-700 p-2 w-full bg-gray-800 text-white rounded-md mb-2"
-          ref="searchInput"
-      />
-      <div class="flex flex-col space-y-2 mt-2">
-        <label class="flex items-center space-x-2">
-          <input type="checkbox" v-model="searchOptions.includeDescriptions" @change="updateSearchOptions"
-                 class="form-checkbox text-blue-500"/>
-          <span class="text-sm">Include sound names in search</span>
-        </label>
-        <label class="flex items-center space-x-2">
-          <input type="checkbox" v-model="searchOptions.groupSimilarSounds" @change="updateSearchOptions"
-                 class="form-checkbox text-blue-500"/>
-          <span class="text-sm">Group similar sounds</span>
-        </label>
-      </div>
-      <div v-if="showSuggestions" class="fixed inset-0 bg-black bg-opacity-50 z-50"
-           @click="showSuggestions = false"></div>
-      <ul
-          v-if="showSuggestions"
-          class="fixed bg-gray-800 border border-gray-700 rounded-md mt-1 max-h-60 overflow-y-auto scrollbar-hide z-50"
-          :style="suggestionStyle"
+  <div class="filter-sidebar p-3 bg-gray-900 text-white h-full relative flex flex-col overflow-hidden">
+    <!-- Category Filter -->
+    <div class="mb-2 flex-shrink-0">
+      <h3 class="font-semibold mb-1 text-sm text-gray-300">Category</h3>
+      <select
+          @change="updateFolder($event)"
+          class="border border-gray-700 p-1.5 w-full bg-gray-800 text-white rounded text-sm"
+          :value="selectedFolder"
       >
-        <li
-            v-for="(suggestion, index) in suggestions"
-            :key="index"
-            @click="selectSuggestion(suggestion)"
-            class="px-4 py-2 hover:bg-gray-700 cursor-pointer"
-            :class="{ 'bg-gray-700': index === arrowCounter }"
+        <option value="">All Categories</option>
+        <option v-for="folder in folders" :key="folder" :value="folder">
+          {{ folder }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Search Section -->
+    <div class="mb-2 flex-grow overflow-hidden">
+      <h3 class="font-semibold mb-1 text-sm text-gray-300">Search</h3>
+      <div class="relative">
+        <input
+            type="text"
+            v-model="localSearchQuery"
+            @input="updateSearch"
+            @keydown.down="onArrowDown"
+            @keydown.up="onArrowUp"
+            @keydown.enter="onEnter"
+            placeholder="Search sounds..."
+            class="border border-gray-700 p-1.5 w-full bg-gray-800 text-white rounded text-sm mb-2"
+            ref="searchInput"
+        />
+        
+        <!-- Compact checkboxes -->
+        <div class="space-y-1 mb-3">
+          <label class="flex items-center space-x-1.5">
+            <input type="checkbox" v-model="searchOptions.includeDescriptions" @change="updateSearchOptions"
+                   class="form-checkbox text-blue-500 w-3 h-3"/>
+            <span class="text-xs text-gray-300">Include sound names in search</span>
+          </label>
+          <label class="flex items-center space-x-1.5">
+            <input type="checkbox" v-model="searchOptions.groupSimilarSounds" @change="updateSearchOptions"
+                   class="form-checkbox text-blue-500 w-3 h-3"/>
+            <span class="text-xs text-gray-300">Group similar sounds</span>
+          </label>
+        </div>
+
+        <!-- Volume Control -->
+        <GlobalVolumeSlider />
+        
+        <!-- Search suggestions overlay -->
+        <div v-if="showSuggestions" class="fixed inset-0 bg-black bg-opacity-50 z-50"
+             @click="showSuggestions = false"></div>
+        <ul
+            v-if="showSuggestions"
+            class="fixed bg-gray-800 border border-gray-700 rounded-md mt-1 max-h-60 overflow-y-auto scrollbar-hide z-50"
+            :style="suggestionStyle"
         >
-          <div class="font-semibold">{{ suggestion.displayName }}</div>
-          <div v-for="(sound, soundIndex) in suggestion.sounds.slice(0, 3)" :key="soundIndex"
-               class="text-xs text-gray-400">
-            {{ sound }}
-          </div>
-          <div v-if="suggestion.sounds.length > 3" class="text-xs text-gray-500">
-            ... and {{ suggestion.sounds.length - 3 }} more
-          </div>
-        </li>
-      </ul>
+          <li
+              v-for="(suggestion, index) in suggestions"
+              :key="index"
+              @click="selectSuggestion(suggestion)"
+              class="px-4 py-2 hover:bg-gray-700 cursor-pointer"
+              :class="{ 'bg-gray-700': index === arrowCounter }"
+          >
+            <div class="font-semibold">{{ suggestion.displayName }}</div>
+            <div v-for="(sound, soundIndex) in suggestion.sounds.slice(0, 3)" :key="soundIndex"
+                 class="text-xs text-gray-400">
+              {{ sound }}
+            </div>
+            <div v-if="suggestion.sounds.length > 3" class="text-xs text-gray-500">
+              ... and {{ suggestion.sounds.length - 3 }} more
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 <script>
+import GlobalVolumeSlider from './GlobalVolumeSlider.vue';
+
 export default {
+  components: {
+    GlobalVolumeSlider,
+  },
   props: {
     folders: Array,
     availableTags: Array,
@@ -157,7 +175,7 @@ export default {
                   (typeof s === 'string' ? s : s.name || '').toLowerCase()
               );
 
-              const matches = searchTerms.every(term => {
+              return searchTerms.every(term => {
                 if (this.searchOptions.groupSimilarSounds) {
                   const regex = new RegExp(`${term.replace(/\d+$/, '')}\\d*$`);
                   return regex.test(normalizedName) || normalizedSoundNames.some(name => regex.test(name));
@@ -165,7 +183,6 @@ export default {
                   return normalizedName.includes(term) || normalizedSoundNames.some(name => name.includes(term));
                 }
               });
-              return matches;
             })
             .map(sound => ({
               displayName: sound.displayName,
@@ -219,7 +236,7 @@ export default {
 
 <style scoped>
 .filter-sidebar {
-  width: 350px;
-  height: 300px
+  width: 320px;
+  height: 265px;
 }
 </style>

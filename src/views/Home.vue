@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen bg-gray-900 text-white flex flex-col">
-    <div class="flex flex-grow overflow-hidden">
+    <div class="flex overflow-hidden" style="flex: 0 0 auto;">
       <FilterSidebar
           :folders="availableFolders"
           :availableTags="availableTags"
@@ -15,8 +15,8 @@
           @update:searchQuery="updateSearchQuery"
           @update:searchOptions="updateSearchOptions"
       />
-      <div class="flex-grow flex flex-col overflow-hidden">
-        <div class="p-4">
+      <div class="flex-grow flex flex-col">
+        <div class="p-4 flex-shrink-0" style="max-height: 350px;">
           <SoundSelection
               :selectedSounds="selectedSounds"
               @remove-sound="removeSound"
@@ -26,9 +26,14 @@
               @update-volume="updateSelectedSoundVolume"
               @show-notification="showNotification"
               @play-single-sound="playSound"
+              @add-layer="addLayer"
+              @remove-layer="removeLayer"
+              @update-layer-pitch="updateLayerPitch"
+              @update-layer-volume="updateLayerVolume"
+              @toggle-per-layer-volume="togglePerLayerVolume"
           />
         </div>
-        <div class="p-4" :style="{ paddingBottom: tagSelectionPadding + 'px' }">
+        <div class="p-4 flex-shrink-0">
           <TagSelection
               :availableTags="availableTags"
               :selectedTags="selectedTags"
@@ -40,6 +45,7 @@
       </div>
     </div>
     <SoundGrid
+        class="flex-grow"
         :folder="selectedFolder"
         :searchQuery="searchQuery"
         :selectedSounds="selectedSounds"
@@ -81,7 +87,9 @@ import TagSelection from "@/components/TagSelection.vue";
 import Credit from "@/components/Credit.vue";
 import KofiWidget from '@/components/KofiWidget.vue';
 import StopButton from '@/components/StopButton.vue';
+import GlobalVolumeSlider from '@/components/GlobalVolumeSlider.vue';
 import { debounce } from 'lodash';
+import { useGlobalVolume } from '@/composables/useGlobalVolume';
 
 export default {
   components: {
@@ -93,6 +101,11 @@ export default {
     Credit,
     KofiWidget,
     StopButton,
+    GlobalVolumeSlider,
+  },
+  setup() {
+    const { getEffectiveVolume } = useGlobalVolume();
+    return { getEffectiveVolume };
   },
   data() {
     const hashContent = window.location.hash.slice(1);
@@ -187,8 +200,16 @@ export default {
 
       this.selectedSounds.forEach((sound, index) => {
         urlParams.set(`s${index}`, sound.soundFileName.replace(/\//g, '.'));
-        urlParams.set(`p${index}`, sound.pitch.toFixed(2));
         urlParams.set(`v${index}`, sound.volume.toFixed(1));
+
+        if (sound.layers && sound.layers.length > 0) {
+          urlParams.set(`l${index}`, sound.layers.map(layer => layer.pitch.toFixed(2)).join(','));
+          if (sound.usePerLayerVolume) {
+            urlParams.set(`lv${index}`, sound.layers.map(layer => (layer.volume || 1.0).toFixed(1)).join(','));
+          }
+        } else {
+          urlParams.set(`p${index}`, sound.pitch.toFixed(2));
+        }
       });
 
       if (this.searchQuery) urlParams.set('search', this.searchQuery);
@@ -224,11 +245,34 @@ export default {
       const soundsToLoad = [];
 
       while (urlParams.has(`s${i}`)) {
-        soundsToLoad.push({
-          soundFileName: urlParams.get(`s${i}`).replace(/\./g, '/'),
-          pitch: parseFloat(urlParams.get(`p${i}`) || '1.0'),
-          volume: parseFloat(urlParams.get(`v${i}`) || '1.0')
-        });
+        const soundFileName = urlParams.get(`s${i}`).replace(/\./g, '/');
+        const volume = parseFloat(urlParams.get(`v${i}`) || '1.0');
+        const layersParam = urlParams.get(`l${i}`);
+
+        if (layersParam) {
+          const layerVolumesParam = urlParams.get(`lv${i}`);
+          const pitches = layersParam.split(',');
+          const volumes = layerVolumesParam ? layerVolumesParam.split(',') : [];
+
+          const layers = pitches.map((p, idx) => ({
+            pitch: parseFloat(p),
+            volume: volumes[idx] ? parseFloat(volumes[idx]) : 1.0
+          }));
+
+          soundsToLoad.push({
+            soundFileName,
+            volume,
+            layers,
+            usePerLayerVolume: !!layerVolumesParam
+          });
+        } else {
+          const pitch = parseFloat(urlParams.get(`p${i}`) || '1.0');
+          soundsToLoad.push({
+            soundFileName,
+            pitch,
+            volume
+          });
+        }
         i++;
       }
 
@@ -249,9 +293,14 @@ export default {
             id: `${folder}_${originalSound.displayName}_${soundFileName}_0`,
             displayName: originalSound.displayName,
             soundFileName: soundFileName,
-            pitch: soundParam.pitch,
+            pitch: soundParam.pitch || 1.0,
             volume: soundParam.volume
           };
+
+          if (soundParam.layers) {
+            soundToAdd.layers = soundParam.layers;
+            soundToAdd.usePerLayerVolume = soundParam.usePerLayerVolume || false;
+          }
 
           this.selectedSounds.push(soundToAdd);
         }
@@ -313,7 +362,11 @@ export default {
       });
 
       if (index === -1) {
-        this.selectedSounds.push({...soundItem});
+        const newSound = {...soundItem};
+        if (!newSound.layers) {
+          newSound.layers = [{pitch: soundItem.pitch || 1.0}];
+        }
+        this.selectedSounds.push(newSound);
       } else {
         this.selectedSounds.splice(index, 1);
       }
@@ -398,27 +451,58 @@ export default {
         const arrayBuffer = await response.arrayBuffer();
         const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
 
-        const sourceNode = this.audioContext.createBufferSource();
-        sourceNode.buffer = audioBuffer;
+        if (soundItem.layers && soundItem.layers.length > 0) {
+          soundItem.layers.forEach(layer => {
+            const sourceNode = this.audioContext.createBufferSource();
+            sourceNode.buffer = audioBuffer;
 
-        const gainNode = this.audioContext.createGain();
-        gainNode.gain.value = soundItem.volume;
+            const gainNode = this.audioContext.createGain();
+            if (soundItem.usePerLayerVolume) {
+              const layerVolume = layer.volume !== undefined ? layer.volume : 1.0;
+              gainNode.gain.value = this.getEffectiveVolume(soundItem.volume * layerVolume);
+            } else {
+              gainNode.gain.value = this.getEffectiveVolume(soundItem.volume);
+            }
 
-        sourceNode.connect(gainNode);
-        gainNode.connect(this.audioContext.destination);
+            sourceNode.connect(gainNode);
+            gainNode.connect(this.audioContext.destination);
 
-        sourceNode.playbackRate.value = soundItem.pitch;
+            sourceNode.playbackRate.value = layer.pitch;
 
-        this.activeSoundSources.push(sourceNode);
+            this.activeSoundSources.push(sourceNode);
 
-        sourceNode.onended = () => {
-          const index = this.activeSoundSources.indexOf(sourceNode);
-          if (index !== -1) {
-            this.activeSoundSources.splice(index, 1);
-          }
-        };
+            sourceNode.onended = () => {
+              const index = this.activeSoundSources.indexOf(sourceNode);
+              if (index !== -1) {
+                this.activeSoundSources.splice(index, 1);
+              }
+            };
 
-        sourceNode.start();
+            sourceNode.start();
+          });
+        } else {
+          const sourceNode = this.audioContext.createBufferSource();
+          sourceNode.buffer = audioBuffer;
+
+          const gainNode = this.audioContext.createGain();
+          gainNode.gain.value = this.getEffectiveVolume(soundItem.volume);
+
+          sourceNode.connect(gainNode);
+          gainNode.connect(this.audioContext.destination);
+
+          sourceNode.playbackRate.value = soundItem.pitch;
+
+          this.activeSoundSources.push(sourceNode);
+
+          sourceNode.onended = () => {
+            const index = this.activeSoundSources.indexOf(sourceNode);
+            if (index !== -1) {
+              this.activeSoundSources.splice(index, 1);
+            }
+          };
+
+          sourceNode.start();
+        }
       } catch (error) {
         console.error('Error playing sound:', error);
         this.showNotification('Error', 'Failed to play sound');
@@ -487,6 +571,44 @@ export default {
       } catch (error) {
         console.error('Error fetching sound tags:', error);
         this.soundTags = {};
+      }
+    },
+    addLayer(sound) {
+      const index = this.selectedSounds.findIndex(s => s.id === sound.id);
+      if (index !== -1) {
+        if (!this.selectedSounds[index].layers) {
+          this.selectedSounds[index].layers = [{pitch: this.selectedSounds[index].pitch || 1.0, volume: 1.0}];
+        }
+        this.selectedSounds[index].layers.push({pitch: 1.0, volume: 1.0});
+        this.updateUrlWithSounds();
+      }
+    },
+    removeLayer(sound, layerIndex) {
+      const index = this.selectedSounds.findIndex(s => s.id === sound.id);
+      if (index !== -1 && this.selectedSounds[index].layers && this.selectedSounds[index].layers.length > 1) {
+        this.selectedSounds[index].layers.splice(layerIndex, 1);
+        this.updateUrlWithSounds();
+      }
+    },
+    updateLayerPitch(sound, layerIndex, pitch) {
+      const index = this.selectedSounds.findIndex(s => s.id === sound.id);
+      if (index !== -1 && this.selectedSounds[index].layers && this.selectedSounds[index].layers[layerIndex]) {
+        this.selectedSounds[index].layers[layerIndex].pitch = pitch;
+        this.updateUrlWithSounds();
+      }
+    },
+    updateLayerVolume(sound, layerIndex, volume) {
+      const index = this.selectedSounds.findIndex(s => s.id === sound.id);
+      if (index !== -1 && this.selectedSounds[index].layers && this.selectedSounds[index].layers[layerIndex]) {
+        this.selectedSounds[index].layers[layerIndex].volume = volume;
+        this.updateUrlWithSounds();
+      }
+    },
+    togglePerLayerVolume(sound) {
+      const index = this.selectedSounds.findIndex(s => s.id === sound.id);
+      if (index !== -1) {
+        this.selectedSounds[index].usePerLayerVolume = !this.selectedSounds[index].usePerLayerVolume;
+        this.updateUrlWithSounds();
       }
     },
   },
