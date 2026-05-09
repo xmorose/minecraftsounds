@@ -26,23 +26,25 @@
           Group: {{ sound.groupedSounds.length }} sounds
         </div>
         <div @click.stop class="mb-1">
-          <div class="flex justify-between items-center">
-            <label class="block text-gray-400 text-xs">
-              {{ sound.layers && sound.layers.length > 1 ? 'Pitch Layers' : 'Pitch' }}
+          <div class="flex justify-between items-center gap-2 mb-1">
+            <label class="block text-gray-300 text-xs font-semibold">
+              Pitch ({{ sound.layers ? sound.layers.length : 1 }})
             </label>
             <div class="flex gap-1">
               <button
-                v-if="sound.layers && sound.layers.length > 0"
+                v-if="sound.layers && sound.layers.length > 1"
                 @click.stop="togglePerLayerVolume(sound)"
-                class="text-purple-400 hover:text-purple-600 text-xs focus:outline-none"
-                :title="sound.usePerLayerVolume ? 'Switch to global volume' : 'Switch to per-layer volume'">
-                <i :class="sound.usePerLayerVolume ? 'fas fa-layer-group' : 'fas fa-volume-up'"></i>
+                class="px-2 py-1 rounded text-xs font-medium bg-purple-600 hover:bg-purple-500 text-white focus:outline-none flex items-center gap-1"
+                :title="sound.usePerLayerVolume ? 'Each layer has its own volume — click for shared volume' : 'All layers share one volume — click for per-layer volume'">
+                <i :class="sound.usePerLayerVolume ? 'fas fa-layer-group' : 'fas fa-volume-up'" class="text-sm"></i>
+                <span>{{ sound.usePerLayerVolume ? 'Vol: per layer' : 'Vol: shared' }}</span>
               </button>
               <button
                 @click.stop="addLayer(sound)"
-                class="text-blue-400 hover:text-blue-600 text-xs focus:outline-none"
-                title="Add pitch layer">
-                <i class="fas fa-plus"></i>
+                class="px-2 py-1 rounded text-xs font-medium bg-blue-600 hover:bg-blue-500 text-white focus:outline-none flex items-center gap-1"
+                title="Add another pitch layer (plays simultaneously)">
+                <i class="fas fa-plus text-sm"></i>
+                <span>Pitch</span>
               </button>
             </div>
           </div>
@@ -62,9 +64,9 @@
                 <button
                   v-if="sound.layers.length > 1"
                   @click.stop="removeLayer(sound, layerIndex)"
-                  class="text-red-400 hover:text-red-600 text-xs focus:outline-none"
-                  title="Remove layer">
-                  <i class="fas fa-minus"></i>
+                  class="w-6 h-6 flex items-center justify-center rounded text-red-400 hover:text-red-300 hover:bg-red-900/30 focus:outline-none"
+                  title="Remove this layer">
+                  <i class="fas fa-minus text-sm"></i>
                 </button>
               </div>
               <div v-if="sound.usePerLayerVolume" class="flex items-center gap-1">

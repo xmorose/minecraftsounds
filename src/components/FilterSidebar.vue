@@ -49,7 +49,7 @@
         <GlobalVolumeSlider />
         
         <!-- Search suggestions overlay -->
-        <div v-if="showSuggestions" class="fixed inset-0 bg-black bg-opacity-50 z-50"
+        <div v-if="showSuggestions" class="fixed inset-0 z-40"
              @click="showSuggestions = false"></div>
         <ul
             v-if="showSuggestions"
@@ -191,8 +191,6 @@ export default {
             }))
             .slice(0, 100);
 
-        console.log("Filtered suggestions:", this.suggestions);
-
         this.showSuggestions = this.suggestions.length > 0;
         this.arrowCounter = -1;
       } catch (error) {
@@ -237,6 +235,6 @@ export default {
 <style scoped>
 .filter-sidebar {
   width: 320px;
-  height: 265px;
+  height: 100%;
 }
 </style>

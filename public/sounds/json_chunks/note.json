@@ -104,6 +104,34 @@
       }
     ]
   },
+  "note.trumpet": {
+    "sounds": [
+      {
+        "name": "note/trumpet"
+      }
+    ]
+  },
+  "note.trumpet_exposed": {
+    "sounds": [
+      {
+        "name": "note/trumpet_exposed"
+      }
+    ]
+  },
+  "note.trumpet_oxidized": {
+    "sounds": [
+      {
+        "name": "note/trumpet_oxidized"
+      }
+    ]
+  },
+  "note.trumpet_weathered": {
+    "sounds": [
+      {
+        "name": "note/trumpet_weathered"
+      }
+    ]
+  },
   "note.xylobone": {
     "sounds": [
       {

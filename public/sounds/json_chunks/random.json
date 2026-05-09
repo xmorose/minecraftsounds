@@ -2,21 +2,24 @@
   "random.anvil_break": {
     "sounds": [
       {
-        "name": "random/anvil_break"
+        "name": "random/anvil_break",
+        "volume": 0.5
       }
     ]
   },
   "random.anvil_land": {
     "sounds": [
       {
-        "name": "random/anvil_land"
+        "name": "random/anvil_land",
+        "volume": 0.5
       }
     ]
   },
   "random.anvil_use": {
     "sounds": [
       {
-        "name": "random/anvil_use"
+        "name": "random/anvil_use",
+        "volume": 0.5
       }
     ]
   },

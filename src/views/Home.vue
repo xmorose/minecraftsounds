@@ -616,7 +616,7 @@ export default {
     this.loadFromUrl();
     window.addEventListener('keydown', this.handleKeydown);
   },
-  beforeDestroy() {
+  beforeUnmount() {
     if (this.updateUrlDebounced) {
       this.updateUrlDebounced.cancel();
     }

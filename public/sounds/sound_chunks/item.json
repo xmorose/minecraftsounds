@@ -1575,5 +1575,116 @@
       "mob/sheep/shear"
     ],
     "subtitle": "subtitles.item.shears.snip"
+  },
+  "item.armor.equip_copper": {
+    "sounds": [
+      "item/armor/equip_copper1",
+      "item/armor/equip_copper2",
+      "item/armor/equip_copper3",
+      "item/armor/equip_copper4",
+      "item/armor/equip_copper5",
+      "item/armor/equip_copper6"
+    ],
+    "subtitle": "subtitles.item.armor.equip_copper"
+  },
+  "item.armor.equip_nautilus": {
+    "sounds": [
+      "item/armor/equip_wolf1",
+      "item/armor/equip_wolf2"
+    ],
+    "subtitle": "subtitles.item.armor.equip_nautilus"
+  },
+  "item.armor.unequip_nautilus": {
+    "sounds": [
+      "item/armor/unequip_wolf1",
+      "item/armor/unequip_wolf2"
+    ],
+    "subtitle": "subtitles.item.armor.unequip_nautilus"
+  },
+  "item.golden_dandelion.unuse": {
+    "sounds": [
+      "item/golden_dandelion/unuse"
+    ],
+    "subtitle": "subtitles.item.golden_dandelion.unuse"
+  },
+  "item.golden_dandelion.use": {
+    "sounds": [
+      "item/golden_dandelion/use"
+    ],
+    "subtitle": "subtitles.item.golden_dandelion.use"
+  },
+  "item.nautilus_saddle_equip": {
+    "sounds": [
+      "mob/nautilus/nautilus_saddle_equip"
+    ],
+    "subtitle": "subtitles.item.nautilus_saddle_equip"
+  },
+  "item.nautilus_saddle_underwater_equip": {
+    "sounds": [
+      "mob/nautilus/nautilus_saddle_underwater_equip"
+    ],
+    "subtitle": "subtitles.item.nautilus_saddle_underwater_equip"
+  },
+  "item.spear.attack": {
+    "sounds": [
+      "item/spear/attack1",
+      "item/spear/attack2",
+      "item/spear/attack3"
+    ],
+    "subtitle": "subtitles.item.spear.attack"
+  },
+  "item.spear.hit": {
+    "sounds": [
+      "item/spear/hit1",
+      "item/spear/hit2",
+      "item/spear/hit3"
+    ],
+    "subtitle": "subtitles.item.spear.hit"
+  },
+  "item.spear.lunge_1": {
+    "sounds": [
+      "item/spear/lunge1"
+    ],
+    "subtitle": "subtitles.item.spear.lunge"
+  },
+  "item.spear.lunge_2": {
+    "sounds": [
+      "item/spear/lunge2"
+    ],
+    "subtitle": "subtitles.item.spear.lunge"
+  },
+  "item.spear.lunge_3": {
+    "sounds": [
+      "item/spear/lunge3"
+    ],
+    "subtitle": "subtitles.item.spear.lunge"
+  },
+  "item.spear.use": {
+    "sounds": [
+      "item/spear/use"
+    ],
+    "subtitle": "subtitles.item.spear.use"
+  },
+  "item.spear_wood.attack": {
+    "sounds": [
+      "item/spear/wood/attack1",
+      "item/spear/wood/attack2",
+      "item/spear/wood/attack3"
+    ],
+    "subtitle": "subtitles.item.spear_wood.attack"
+  },
+  "item.spear_wood.hit": {
+    "sounds": [
+      "item/spear/wood/hit1",
+      "item/spear/wood/hit2",
+      "item/spear/wood/hit3"
+    ],
+    "subtitle": "subtitles.item.spear_wood.hit"
+  },
+  "item.spear_wood.use": {
+    "sounds": [
+      "item/spear/wood/use"
+    ],
+    "subtitle": "subtitles.item.spear_wood.use"
   }
 }

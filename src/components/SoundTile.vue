@@ -72,13 +72,13 @@
         <i class="fas fa-play mr-1"></i> Play
       </button>
       <div class="flex space-x-2">
-        <button @click.stop="copyMethod('mmEffect')" class="copy-button w-8 h-8 text-xs text-gray-400 hover:text-white flex items-center justify-center rounded-md bg-gray-700 hover:bg-gray-600 transition duration-300">
+        <button @click.stop="copyMethod('mmEffect')" class="w-8 h-8 text-xs text-gray-400 hover:text-white flex items-center justify-center rounded-md bg-gray-700 hover:bg-gray-600 transition duration-300">
           <i class="fa-solid fa-dragon"></i>
         </button>
-        <button @click.stop="copyMethod('soundName')" class="copy-button w-8 h-8 text-xs text-gray-400 hover:text-white flex items-center justify-center rounded-md bg-gray-700 hover:bg-gray-600 transition duration-300">
+        <button @click.stop="copyMethod('soundName')" class="w-8 h-8 text-xs text-gray-400 hover:text-white flex items-center justify-center rounded-md bg-gray-700 hover:bg-gray-600 transition duration-300">
           <i class="fa-regular fa-clipboard"></i>
         </button>
-        <button @click.stop="copyMethod('soundCommand')" class="copy-button w-8 h-8 text-xs text-gray-400 hover:text-white flex items-center justify-center rounded-md bg-gray-700 hover:bg-gray-600 transition duration-300">
+        <button @click.stop="copyMethod('soundCommand')" class="w-8 h-8 text-xs text-gray-400 hover:text-white flex items-center justify-center rounded-md bg-gray-700 hover:bg-gray-600 transition duration-300">
           <i class="fa-solid fa-terminal"></i>
         </button>
       </div>

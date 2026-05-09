@@ -20,5 +20,18 @@
       "ambient/weather/rain4"
     ],
     "subtitle": "subtitles.weather.rain"
+  },
+  "weather.end_flash": {
+    "sounds": [
+      "ambient/weather/end_flash1",
+      "ambient/weather/end_flash2",
+      "ambient/weather/end_flash3",
+      "ambient/weather/end_flash4",
+      "ambient/weather/end_flash5",
+      "ambient/weather/end_flash6",
+      "ambient/weather/end_flash7",
+      "ambient/weather/end_flash8"
+    ],
+    "subtitle": "subtitles.weather.end_flash"
   }
 }

@@ -11334,5 +11334,278 @@
       }
     ],
     "subtitle": "subtitles.block.sand.idle"
+  },
+  "block.copper_chest.close": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_close1"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_close2"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_close3"
+      }
+    ],
+    "subtitle": "subtitles.block.copper_chest.close"
+  },
+  "block.copper_chest.open": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_open1"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_open2"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_open3"
+      }
+    ],
+    "subtitle": "subtitles.block.copper_chest.open"
+  },
+  "block.copper_chest_oxidized.close": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_close1"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_close2"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_close3"
+      }
+    ],
+    "subtitle": "subtitles.block.copper_chest.close"
+  },
+  "block.copper_chest_oxidized.open": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_open1"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_open2"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_open3"
+      }
+    ],
+    "subtitle": "subtitles.block.copper_chest.open"
+  },
+  "block.copper_chest_weathered.close": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_close1"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_close2"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_close3"
+      }
+    ],
+    "subtitle": "subtitles.block.copper_chest.close"
+  },
+  "block.copper_chest_weathered.open": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_open1"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_open2"
+      },
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_open3"
+      }
+    ],
+    "subtitle": "subtitles.block.copper_chest.open"
+  },
+  "block.copper_golem_statue.break": {
+    "sounds": [
+      "block/copper_statue/break1",
+      "block/copper_statue/break2",
+      "block/copper_statue/break3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.copper_golem_statue.fall": {
+    "sounds": [
+      "block/copper_statue/hit1",
+      "block/copper_statue/hit2",
+      "block/copper_statue/hit3",
+      "block/copper_statue/hit4"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.copper_golem_statue.hit": {
+    "sounds": [
+      "block/copper_statue/hit1",
+      "block/copper_statue/hit2",
+      "block/copper_statue/hit3",
+      "block/copper_statue/hit4"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.copper_golem_statue.place": {
+    "sounds": [
+      "block/copper_statue/place1",
+      "block/copper_statue/place2",
+      "block/copper_statue/place3",
+      "block/copper_statue/place4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.copper_golem_statue.step": {
+    "sounds": [
+      "block/copper_statue/hit1",
+      "block/copper_statue/hit2",
+      "block/copper_statue/hit3",
+      "block/copper_statue/hit4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.note_block.trumpet": {
+    "sounds": [
+      "note/trumpet"
+    ],
+    "subtitle": "subtitles.block.note_block.note"
+  },
+  "block.note_block.trumpet_exposed": {
+    "sounds": [
+      "note/trumpet_exposed"
+    ],
+    "subtitle": "subtitles.block.note_block.note"
+  },
+  "block.note_block.trumpet_oxidized": {
+    "sounds": [
+      "note/trumpet_oxidized"
+    ],
+    "subtitle": "subtitles.block.note_block.note"
+  },
+  "block.note_block.trumpet_weathered": {
+    "sounds": [
+      "note/trumpet_weathered"
+    ],
+    "subtitle": "subtitles.block.note_block.note"
+  },
+  "block.shelf.activate": {
+    "sounds": [
+      "block/shelf/activate1",
+      "block/shelf/activate2",
+      "block/shelf/activate3"
+    ],
+    "subtitle": "subtitles.block.shelf.activate"
+  },
+  "block.shelf.break": {
+    "sounds": [
+      "block/chiseled_bookshelf/break1",
+      "block/chiseled_bookshelf/break2",
+      "block/chiseled_bookshelf/break3",
+      "block/chiseled_bookshelf/break4",
+      "block/chiseled_bookshelf/break5",
+      "block/chiseled_bookshelf/break6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.shelf.deactivate": {
+    "sounds": [
+      "block/shelf/deactivate1",
+      "block/shelf/deactivate2",
+      "block/shelf/deactivate3"
+    ],
+    "subtitle": "subtitles.block.shelf.deactivate"
+  },
+  "block.shelf.fall": {
+    "sounds": [
+      "block/chiseled_bookshelf/step1",
+      "block/chiseled_bookshelf/step2",
+      "block/chiseled_bookshelf/step3",
+      "block/chiseled_bookshelf/step4",
+      "block/chiseled_bookshelf/step5"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.shelf.hit": {
+    "sounds": [
+      "block/chiseled_bookshelf/step1",
+      "block/chiseled_bookshelf/step2",
+      "block/chiseled_bookshelf/step3",
+      "block/chiseled_bookshelf/step4",
+      "block/chiseled_bookshelf/step5"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.shelf.multi_swap": {
+    "sounds": [
+      "block/shelf/multi_swap1",
+      "block/shelf/multi_swap2",
+      "block/shelf/multi_swap3"
+    ],
+    "subtitle": "subtitles.block.shelf.multi_swap"
+  },
+  "block.shelf.place": {
+    "sounds": [
+      "block/chiseled_bookshelf/break1",
+      "block/chiseled_bookshelf/break2",
+      "block/chiseled_bookshelf/break3",
+      "block/chiseled_bookshelf/break4",
+      "block/chiseled_bookshelf/break5",
+      "block/chiseled_bookshelf/break6"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.shelf.place_item": {
+    "sounds": [
+      "block/shelf/place_item1",
+      "block/shelf/place_item2",
+      "block/shelf/place_item3",
+      "block/shelf/place_item4"
+    ],
+    "subtitle": "subtitles.block.shelf.place_item"
+  },
+  "block.shelf.single_swap": {
+    "sounds": [
+      "block/shelf/single_swap1",
+      "block/shelf/single_swap2",
+      "block/shelf/single_swap3",
+      "block/shelf/single_swap4"
+    ],
+    "subtitle": "subtitles.block.shelf.single_swap"
+  },
+  "block.shelf.step": {
+    "sounds": [
+      "block/chiseled_bookshelf/step1",
+      "block/chiseled_bookshelf/step2",
+      "block/chiseled_bookshelf/step3",
+      "block/chiseled_bookshelf/step4",
+      "block/chiseled_bookshelf/step5"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.shelf.take_item": {
+    "sounds": [
+      "block/shelf/single_swap1",
+      "block/shelf/single_swap2",
+      "block/shelf/single_swap3",
+      "block/shelf/single_swap4"
+    ],
+    "subtitle": "subtitles.block.shelf.take_item"
   }
 }

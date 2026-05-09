@@ -2482,6 +2482,7 @@
   "block.chest.close1": {
     "sounds": [
       {
+        "attenuation_distance": 12,
         "name": "block/chest/close1"
       }
     ]
@@ -2489,6 +2490,7 @@
   "block.chest.close2": {
     "sounds": [
       {
+        "attenuation_distance": 12,
         "name": "block/chest/close2"
       }
     ]
@@ -2496,6 +2498,7 @@
   "block.chest.close3": {
     "sounds": [
       {
+        "attenuation_distance": 12,
         "name": "block/chest/close3"
       }
     ]
@@ -2517,6 +2520,7 @@
   "block.chest.open": {
     "sounds": [
       {
+        "attenuation_distance": 12,
         "name": "block/chest/open"
       }
     ]
@@ -3263,6 +3267,150 @@
       }
     ]
   },
+  "block.copper_chest.copper_chest_close1": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_close1"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_close2": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_close2"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_close3": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_close3"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_open1": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_open1"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_open2": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_open2"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_open3": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_open3"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_oxidized_close1": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_close1"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_oxidized_close2": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_close2"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_oxidized_close3": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_close3"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_oxidized_open1": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_open1"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_oxidized_open2": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_open2"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_oxidized_open3": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_oxidized_open3"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_weathered_close1": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_close1"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_weathered_close2": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_close2"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_weathered_close3": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_close3"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_weathered_open1": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_open1"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_weathered_open2": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_open2"
+      }
+    ]
+  },
+  "block.copper_chest.copper_chest_weathered_open3": {
+    "sounds": [
+      {
+        "attenuation_distance": 12,
+        "name": "block/copper_chest/copper_chest_weathered_open3"
+      }
+    ]
+  },
   "block.copper_door.toggle1": {
     "sounds": [
       {
@@ -3283,6 +3431,83 @@
       {
         "name": "block/copper_door/toggle3",
         "pitch": 1.1
+      }
+    ]
+  },
+  "block.copper_statue.break1": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/break1"
+      }
+    ]
+  },
+  "block.copper_statue.break2": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/break2"
+      }
+    ]
+  },
+  "block.copper_statue.break3": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/break3"
+      }
+    ]
+  },
+  "block.copper_statue.hit1": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/hit1"
+      }
+    ]
+  },
+  "block.copper_statue.hit2": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/hit2"
+      }
+    ]
+  },
+  "block.copper_statue.hit3": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/hit3"
+      }
+    ]
+  },
+  "block.copper_statue.hit4": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/hit4"
+      }
+    ]
+  },
+  "block.copper_statue.place1": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/place1"
+      }
+    ]
+  },
+  "block.copper_statue.place2": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/place2"
+      }
+    ]
+  },
+  "block.copper_statue.place3": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/place3"
+      }
+    ]
+  },
+  "block.copper_statue.place4": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/place4"
       }
     ]
   },
@@ -4435,14 +4660,16 @@
   "block.enderchest.close": {
     "sounds": [
       {
-        "name": "block/enderchest/close"
+        "name": "block/enderchest/close",
+        "volume": 0.7
       }
     ]
   },
   "block.enderchest.open": {
     "sounds": [
       {
-        "name": "block/enderchest/open"
+        "name": "block/enderchest/open",
+        "volume": 0.7
       }
     ]
   },
@@ -8995,6 +9222,125 @@
       }
     ]
   },
+  "block.shelf.activate1": {
+    "sounds": [
+      {
+        "name": "block/shelf/activate1"
+      }
+    ]
+  },
+  "block.shelf.activate2": {
+    "sounds": [
+      {
+        "name": "block/shelf/activate2"
+      }
+    ]
+  },
+  "block.shelf.activate3": {
+    "sounds": [
+      {
+        "name": "block/shelf/activate3"
+      }
+    ]
+  },
+  "block.shelf.deactivate1": {
+    "sounds": [
+      {
+        "name": "block/shelf/deactivate1"
+      }
+    ]
+  },
+  "block.shelf.deactivate2": {
+    "sounds": [
+      {
+        "name": "block/shelf/deactivate2"
+      }
+    ]
+  },
+  "block.shelf.deactivate3": {
+    "sounds": [
+      {
+        "name": "block/shelf/deactivate3"
+      }
+    ]
+  },
+  "block.shelf.multi_swap1": {
+    "sounds": [
+      {
+        "name": "block/shelf/multi_swap1"
+      }
+    ]
+  },
+  "block.shelf.multi_swap2": {
+    "sounds": [
+      {
+        "name": "block/shelf/multi_swap2"
+      }
+    ]
+  },
+  "block.shelf.multi_swap3": {
+    "sounds": [
+      {
+        "name": "block/shelf/multi_swap3"
+      }
+    ]
+  },
+  "block.shelf.place_item1": {
+    "sounds": [
+      {
+        "name": "block/shelf/place_item1"
+      }
+    ]
+  },
+  "block.shelf.place_item2": {
+    "sounds": [
+      {
+        "name": "block/shelf/place_item2"
+      }
+    ]
+  },
+  "block.shelf.place_item3": {
+    "sounds": [
+      {
+        "name": "block/shelf/place_item3"
+      }
+    ]
+  },
+  "block.shelf.place_item4": {
+    "sounds": [
+      {
+        "name": "block/shelf/place_item4"
+      }
+    ]
+  },
+  "block.shelf.single_swap1": {
+    "sounds": [
+      {
+        "name": "block/shelf/single_swap1"
+      }
+    ]
+  },
+  "block.shelf.single_swap2": {
+    "sounds": [
+      {
+        "name": "block/shelf/single_swap2"
+      }
+    ]
+  },
+  "block.shelf.single_swap3": {
+    "sounds": [
+      {
+        "name": "block/shelf/single_swap3"
+      }
+    ]
+  },
+  "block.shelf.single_swap4": {
+    "sounds": [
+      {
+        "name": "block/shelf/single_swap4"
+      }
+    ]
+  },
   "block.shroomlight.break1": {
     "sounds": [
       {
@@ -10788,6 +11134,34 @@
       {
         "name": "block/wooden_trapdoor/open5",
         "volume": 0.9
+      }
+    ]
+  },
+  "block.copper_statue.become_statue1": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/become_statue1"
+      }
+    ]
+  },
+  "block.copper_statue.become_statue2": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/become_statue2"
+      }
+    ]
+  },
+  "block.copper_statue.become_statue3": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/become_statue3"
+      }
+    ]
+  },
+  "block.copper_statue.become_statue4": {
+    "sounds": [
+      {
+        "name": "block/copper_statue/become_statue4"
       }
     ]
   },

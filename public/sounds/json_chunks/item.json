@@ -147,6 +147,48 @@
       }
     ]
   },
+  "item.armor.equip_copper1": {
+    "sounds": [
+      {
+        "name": "item/armor/equip_copper1"
+      }
+    ]
+  },
+  "item.armor.equip_copper2": {
+    "sounds": [
+      {
+        "name": "item/armor/equip_copper2"
+      }
+    ]
+  },
+  "item.armor.equip_copper3": {
+    "sounds": [
+      {
+        "name": "item/armor/equip_copper3"
+      }
+    ]
+  },
+  "item.armor.equip_copper4": {
+    "sounds": [
+      {
+        "name": "item/armor/equip_copper4"
+      }
+    ]
+  },
+  "item.armor.equip_copper5": {
+    "sounds": [
+      {
+        "name": "item/armor/equip_copper5"
+      }
+    ]
+  },
+  "item.armor.equip_copper6": {
+    "sounds": [
+      {
+        "name": "item/armor/equip_copper6"
+      }
+    ]
+  },
   "item.armor.equip_diamond1": {
     "sounds": [
       {
@@ -357,6 +399,22 @@
       }
     ]
   },
+  "item.armor.equip_wolf1": {
+    "sounds": [
+      {
+        "name": "item/armor/equip_wolf1",
+        "pitch": 1.1
+      }
+    ]
+  },
+  "item.armor.equip_wolf2": {
+    "sounds": [
+      {
+        "name": "item/armor/equip_wolf2",
+        "pitch": 1.1
+      }
+    ]
+  },
   "item.armor.equip_netherite1": {
     "sounds": [
       {
@@ -390,22 +448,6 @@
         "name": "item/armor/equip_netherite4",
         "pitch": 0.9,
         "volume": 0.8
-      }
-    ]
-  },
-  "item.armor.equip_wolf1": {
-    "sounds": [
-      {
-        "name": "item/armor/equip_wolf1",
-        "pitch": 1.1
-      }
-    ]
-  },
-  "item.armor.equip_wolf2": {
-    "sounds": [
-      {
-        "name": "item/armor/equip_wolf2",
-        "pitch": 1.1
       }
     ]
   },
@@ -1366,6 +1408,20 @@
       }
     ]
   },
+  "item.golden_dandelion.unuse": {
+    "sounds": [
+      {
+        "name": "item/golden_dandelion/unuse"
+      }
+    ]
+  },
+  "item.golden_dandelion.use": {
+    "sounds": [
+      {
+        "name": "item/golden_dandelion/use"
+      }
+    ]
+  },
   "item.hoe.till1": {
     "sounds": [
       {
@@ -1563,6 +1619,125 @@
     "sounds": [
       {
         "name": "item/shovel/flatten4"
+      }
+    ]
+  },
+  "item.spear.attack1": {
+    "sounds": [
+      {
+        "name": "item/spear/attack1"
+      }
+    ]
+  },
+  "item.spear.attack2": {
+    "sounds": [
+      {
+        "name": "item/spear/attack2"
+      }
+    ]
+  },
+  "item.spear.attack3": {
+    "sounds": [
+      {
+        "name": "item/spear/attack3"
+      }
+    ]
+  },
+  "item.spear.hit1": {
+    "sounds": [
+      {
+        "name": "item/spear/hit1"
+      }
+    ]
+  },
+  "item.spear.hit2": {
+    "sounds": [
+      {
+        "name": "item/spear/hit2"
+      }
+    ]
+  },
+  "item.spear.hit3": {
+    "sounds": [
+      {
+        "name": "item/spear/hit3"
+      }
+    ]
+  },
+  "item.spear.lunge1": {
+    "sounds": [
+      {
+        "name": "item/spear/lunge1"
+      }
+    ]
+  },
+  "item.spear.lunge2": {
+    "sounds": [
+      {
+        "name": "item/spear/lunge2"
+      }
+    ]
+  },
+  "item.spear.lunge3": {
+    "sounds": [
+      {
+        "name": "item/spear/lunge3"
+      }
+    ]
+  },
+  "item.spear.use": {
+    "sounds": [
+      {
+        "name": "item/spear/use"
+      }
+    ]
+  },
+  "item.spear.wood.attack1": {
+    "sounds": [
+      {
+        "name": "item/spear/wood/attack1"
+      }
+    ]
+  },
+  "item.spear.wood.attack2": {
+    "sounds": [
+      {
+        "name": "item/spear/wood/attack2"
+      }
+    ]
+  },
+  "item.spear.wood.attack3": {
+    "sounds": [
+      {
+        "name": "item/spear/wood/attack3"
+      }
+    ]
+  },
+  "item.spear.wood.hit1": {
+    "sounds": [
+      {
+        "name": "item/spear/wood/hit1"
+      }
+    ]
+  },
+  "item.spear.wood.hit2": {
+    "sounds": [
+      {
+        "name": "item/spear/wood/hit2"
+      }
+    ]
+  },
+  "item.spear.wood.hit3": {
+    "sounds": [
+      {
+        "name": "item/spear/wood/hit3"
+      }
+    ]
+  },
+  "item.spear.wood.use": {
+    "sounds": [
+      {
+        "name": "item/spear/wood/use"
       }
     ]
   },

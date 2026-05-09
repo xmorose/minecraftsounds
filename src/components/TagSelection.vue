@@ -1,5 +1,5 @@
 <template>
-  <div class="tag-selection bg-gray-800 p-2 rounded-md flex items-center">
+  <div class="tag-selection bg-gray-800 p-2 rounded-md flex flex-wrap items-center">
     <button
         @click="toggleTag('favorites')"
         class="inline-block px-3 py-1 rounded-full text-sm mr-3 my-1 transition-colors duration-200 relative"
@@ -86,5 +86,6 @@ export default {
 <style scoped>
 .tag-selection {
   max-height: 200px;
+  overflow-y: auto;
 }
 </style>
